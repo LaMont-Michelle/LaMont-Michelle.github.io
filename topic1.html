@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topic 1 : Loops</title>
+
+</head>
+<!--menu slide top -->    
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="reflect.html">Relections</a>
+
+        <a style="font-size: 20px" href="topic1.html">Topic 01</a>
+        <a style="font-size: 20px" href="topic2.html">Topic 02</a>
+        <a style="font-size: 20px" href="topic3.html">Topic 03</a>
+        <a style="font-size: 20px" href="topic4.html">Topic 04</a>
+        <a style="font-size: 20px" href="topic5.html">Topic 05</a>
+        <a style="font-size: 20px" href="topic6.html">Topic 06</a>
+        <a style="font-size: 20px" href="topic7.html">Topic 07</a>
+        <a style="font-size: 20px" href="topic8.html">Topic 08</a>
+        <a style="font-size: 20px" href="topic9.html">Topic 09</a>
+        <a style="font-size: 20px" href="topic10.html">Topic 10</a>
+        <a style="font-size: 20px" href="topic11.html">Topic 11</a>
+        <a style="font-size: 20px" href="topic12.html">Topic 12</a>
+        <a style="font-size: 20px" href="topic13.html">Topic 13</a>
+    </div>
+</div>
+<div align ="right" ><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div>
+<!--menu slide  bottom-->
+<body>
+  <section>
+    <h1>Topic 01</h1>
+    <article>
+      <h3>VARIABLES</h3> 
+      <table id="datatypes">
+        <tr>
+          <th>Datatype</th>
+          <th>code</th>
+        </tr>
+        <tr>
+          <td>String</td>
+          <td>var dog = "Terrier";</td>
+        </tr>
+        <tr>
+          <td>Integer</td>
+          <td>var num1 = 7426;</td>
+        </tr>
+            <td>Boolean</td>
+            <td>var bool = true;</td>
+        </tr>
+        <tr>
+          <td>Undefined</td>
+          <td>var pet;</td>
+        </tr>
+        <tr>
+            <td>Null</td>
+            <td>var pet = null;</td>
+        </tr>
+      </table><hr>
+      <p>
+        <h4>Demo:</h4>
+        // concat a string and number<br>
+        function output( )<br>
+        {<br>
+        var number = 7;<br>
+        var output = "The number is ";<br>
+        //Add the output value to p tag<br>
+        document.getElementById("output")<br>.innerHTML = "Demo result: " + output + number;<br>
+        }<br>
+        
+        var output = "The number is ";<br><br>
+        <center><button class="button", onclick="output()">Demo string</button></center><br><br><br>
+        <div id="output" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div><br>
+      </p>
+      <hr>
+  </article>
+  <article>
+      <h3>LOOPS</h3>
+        <table id="datatypes">
+          <tr>
+            <th>Type</th>
+            <th>code</th>
+          </tr>
+          <tr>
+            <td>while</td>
+            <td>while(condition){}</td>
+          </tr>
+          <tr>
+            <td>do-while</td>
+            <td>do{}while(condition);</td>
+          </tr>
+              <td>for</td>
+              <td>for(state,state,state){}</td>
+          </tr>
+          <tr>
+            <td>for-in</td>
+            <td>for(var in object){}</td>
+          </tr>
+          <tr>
+              <td>for-of</td>
+              <td>for(for in object){}</td>
+          </tr>
+        </table><hr>
+        <p>
+        <p>
+          <h4>Demo:</h4>
+          // this function reads 12 numbers using a for loop
+          function forLoops( )<br>
+          {<br>
+          var num = "";<br>
+          for(var i = 1; i <= 12; i++)<br>
+          {<br>
+          num = num +" "+ i;<br>
+          }<br>
+          document.getElementById("resultLoop")<br>.innerHTML = "The numbers are: "+ num;<br>
+          }<br><br>
+
+          <center><button class="button", onclick="forLoops()">Test Loop</button></center><br><br><br>
+          <div id="demoLoop" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div><br>
+        </p>
+        <hr>
+    <article>
+        <h3>CONDITIONALS STATEMENTS</h3>
+        <table id="datatypes">
+          <tr>
+            <th>Type</th>
+            <th>code</th>
+          </tr>
+          <tr>
+            <td>if statement</td>
+            <td>if(conditon){}</td>
+          </tr>
+          <tr>
+            <td>if/else statement</td>
+            <td>if(conditon){}else{}</td>
+          </tr>
+              <td>if/else if/else</td>
+              <td>if(condition){}else if(con2){}else{}</td>
+          </tr>
+        </table><hr>
+          <p>
+          <h4>Demo:</h4>
+              // condition for time of day greeting
+            function timeStatement() {<br>
+              var greeting;<br>
+              var time = new Date().getHours();<br>
+              if (time < 10) {<br>
+                greeting = "Good morning";<br>
+              } else if (time < 20) {<br>
+                greeting = "Good day";<br>
+              } else {<br>
+                greeting = "Good evening";<br>
+              }<br>
+              document.getElementById("demo")<br>.innerHTML = greeting;<br>
+            }<br>
+          </p>
+          <p>Click the button to get a time-based greeting:</p>
+              <center><button class="button", onclick="timeStatement()">Try it</button></center><br><br>
+          <p id="greeting", style="color: hsl(0, 99%, 27%)";></p><br>
+    </article>
+    <hr>
+    <article>
+        <h3>FUNCTIONS AND PARAMETERS</h3>
+        <table id="datatypes">
+                <tr>
+                  <th>Type</th>
+                  <th>code</th>
+                </tr>
+                <tr>
+                  <td>parameters</td>
+                  <td>names listed in function definition</td>
+                </tr>
+                <tr>
+                  <td>arguments</td>
+                  <td>real values passed to/received by function</td>
+                </tr>
+              </table><hr>
+    <p>
+        <h4>Demo:</h4>
+            // an Integer parameter is passed to sequence Fibonacci
+                function goFibonacci()<br>
+                {<br>
+                var i;<br>
+                var fib = [0, 1];<br>
+                var limit = prompt('Enter the limit for your series:', '');<br>
+                for (i = 2; i < parseInt(limit); i++) {<br>
+                    fib[i] = fib[i - 2] + fib[i - 1];<br>
+                    }<br>
+                    document.getElementById<br>("resultParameters").innerHTML = fib;<br>
+                }<br><br>
+            <center><button class="button", onclick="goFibonacci()">Fibonacci sequence</button></center><br><br>
+            <div id="resultParameters" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div><br>
+          </p>
+    </article>
+<hr>
+    <article>
+        <h3>ARRAYS</h3>
+        <h4>Demo:</h4>
+        <p>
+          function myArrays()<br>
+          {<br>
+          var array1=[1,2,5,3,10,11];<br>
+          var array2=[9,5,2,4,7];<br>
+          // calling function sumIndex<br>
+          var arraySum =sumIndex(array1, array2);<br>
+          document.getElementById<br>("resultArray").innerHTML = arraySum;<br>
+          }<br>
+        </p>
+        <center><button class="button"; onclick="myArrays()">Go my Arrays</button></center><br><br>
+        <div id="resultArray" style="overflow: auto ; color: hsl(0, 99%, 27%)"></div><br>
+    </article>
+    <hr>
+    <article>
+        <h3>ASSOCIATIVE ARRAY</h3>
+        <p>
+          //associative array<br>
+          function yourInfo() {<br>
+          var aboutYou = new Object();<br>
+          var yourName = prompt("Enter your name: ");<br>
+          var yourColor = prompt("What is your favorite color");<br>
+          var yourAnimal = prompt("What is your favorite animal? ");<br>
+          aboutYou["Name "]= yourName;<br>
+          aboutYou["Favorite color "] = yourColor;<br>
+          aboutYou["Favorite animal "] = yourAnimal;<br>
+          var completeInfo = "";<br>
+          for(var i in aboutYou) {<br>
+              completeInfo+= i + "= " + aboutYou[i] + '<br>';<br>
+              }<br>
+          document.getElementById<br>("resultInfo").innerHTML = completeInfo;<br>
+          }<br>
+        </p>
+        <center><button class="button"; onclick="yourInfo()"</button>Demo Associative</button></center><br><br>
+        <div id="resultInfo" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div><br><br>
+    </article>
+    <hr>
+  </section>
+</body>
+<script src="scripts/main.js"></script>
+</html>

@@ -1,0 +1,143 @@
+
+
+html {
+	margin: 20px;
+	background-color: #EDF5C8;
+}
+
+/* slide menu end */
+body {
+	font-family: 'Lato', sans-serif;
+  }
+  
+  .overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;
+  }
+  
+  .overlay-content {
+	position: relative;
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+  }
+  
+  .overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 30px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+	color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.overlay a {font-size: 15px}
+	.overlay .closebtn {
+	font-size: 30px;
+	top: 15px;
+	right: 35px;
+	}
+  }
+/* slide menu end */
+
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   color: #333;
+}
+
+h1 {
+	/*color: whitesmoke;*/
+	text-align: center;
+	font-size: 55px;
+	text-shadow: 3px 2px rgb(0, 140, 255);
+
+}
+
+#rcorners1 {
+	border-radius: 25px;
+	background:  rgb(0, 140, 255);
+	padding: 20px;
+	width: 200px;
+	height: 150px;
+	text-align: center;
+  }
+
+a {
+	
+	text-decoration: none;
+	font-size: 24px;
+	color:  #EDF5C8;
+}
+
+#datatypes {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  #datatypes td, #datatypes th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  #datatypes tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #datatypes tr:hover {background-color: rgb(#ddd);}
+  
+  #datatypes th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: rgb(0, 140, 255);
+	color: white;
+  }
+
+  .button {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: rgb(0, 140, 255);
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+  }
+
+.button:hover {background-color: rgb(0, 140, 255)}
+
+.button:active {
+  background-color: rgb(0, 140, 255);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+p {
+	font-size: 25px;
+	color: rgb(2, 2, 2);
+}

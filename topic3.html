@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topic 3</title>
+</head>
+<!--menu slide top -->    
+<div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="reflect.html">Relections</a>
+
+            <a style="font-size: 20px" href="topic1.html">Topic 01</a>
+            <a style="font-size: 20px" href="topic2.html">Topic 02</a>
+            <a style="font-size: 20px" href="topic3.html">Topic 03</a>
+            <a style="font-size: 20px" href="topic4.html">Topic 04</a>
+            <a style="font-size: 20px" href="topic5.html">Topic 05</a>
+            <a style="font-size: 20px" href="topic6.html">Topic 06</a>
+            <a style="font-size: 20px" href="topic7.html">Topic 07</a>
+            <a style="font-size: 20px" href="topic8.html">Topic 08</a>
+            <a style="font-size: 20px" href="topic9.html">Topic 09</a>
+            <a style="font-size: 20px" href="topic10.html">Topic 10</a>
+            <a style="font-size: 20px" href="topic11.html">Topic 11</a>
+            <a style="font-size: 20px" href="topic12.html">Topic 12</a>
+            <a style="font-size: 20px" href="topic13.html">Topic 13</a>
+        </div>
+    </div>
+    <div align ="right" ><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div>
+    <!--menu slide  bottom-->
+<body>
+    <h1>Topic 03</h1>
+    <article>
+        <h2>JSON = "JavaScript Object Notation"</h2>
+        <p>Data sent to and from the server travels in a string format.<br>
+        JSON uses objects represented as strings.<br>
+        They can be sent back and forth.<br>
+    </p>
+    </article>
+    <hr>
+    <article>
+        <h3> JSON parse() </h3>
+<div> 
+function informationPerson(){<br>
+    var firstName = prompt("Enter your first name: ");<br>
+    var lastName = prompt("Enter your last name: ");<br>
+    var calling = prompt( "Enter your church calling: ");<br>
+    var phone = prompt( "Enter phone number: ");<br><br>
+</div>
+<div>
+    var myInfo = '{"firstName":"'+firstName+'", <br>
+    "lastName":"'+lastName+'",<br>
+    "city":"'+calling+'","phone":"<br>'+phone+'"}';<br>
+    var obj = JSON.parse(myInfo) ;<br>
+    document.getElementById<br>("resultJson").innerHTML =<br>
+    " My name is: " + obj.firstName + " " + obj.lastName<br>
+    + " + "." + " My calling is " + "is: " + "." + obj.calling + <br>
+    " Text me at this number " + obj.phone + " when you need me! ";<br><br> 
+</div>
+<div>
+    var json = {<br>
+    "0": {<br>
+    "firstName": firstName,<br>
+    "lastName": lastName,<br>
+    "calling": calling,<br>
+    "phone": phone },<br>
+    <br>
+    "1":{<br>
+    "name": "Helen",<br>
+    "lastName": "Parr",<br>
+    "calling": "Elastigirl",<br>
+    "phone": 411 }};<br>
+    <br>
+    var persons = "";<br>
+    for (var i in json) { // i is the index for the Json<br>
+    for (var j in json[i]) // j is the values , columns<br>
+    {persons += " Position: " +i+ " KEY: "+j+" VALUE: "+json[i][j];}}<br>
+    document.getElementById<br>("resultJson2").innerHTML = persons;<br><br>
+    </div>
+    </article>
+
+</div>
+<button class = "button", onclick="informationPerson()">parse()</button><br><br>
+<div id="resultJson" style="overflow: auto; color: hsl(0, 99%, 27%)"></div><br>
+<div id="resultJson2" style="overflow: auto; color: hsl(0, 99%, 27%)"></div><br>
+<hr>
+<h3> JSON stringify() </h3>
+<div >
+    function informationStringify(){<br>
+    var obj = { name: "Helen", age: 30, city: "TriCity", job: "a super" };<br>
+    var myJSON = JSON.stringify(obj);<br>
+    document.getElementById<br>("resultStringify").innerHTML = myJSON;<br>
+    }<br><br>
+</div>
+<button class="button", onclick="informationStringify()">stringify()</button><br><br>
+<div id="resultStringify" style="overflow: auto; color: hsl(0, 99%, 27%)";></div><br>
+</div>
+
+</body>
+<script src="scripts/topic3.js"></script>
+<script src="scripts/main.js"></script>
+</html>

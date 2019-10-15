@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topic 5</title>
+</head>
+<!--menu slide top -->    
+<div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="reflect.html">Relections</a>
+
+            <a style="font-size: 20px" href="topic1.html">Topic 01</a>
+            <a style="font-size: 20px" href="topic2.html">Topic 02</a>
+            <a style="font-size: 20px" href="topic3.html">Topic 03</a>
+            <a style="font-size: 20px" href="topic4.html">Topic 04</a>
+            <a style="font-size: 20px" href="topic5.html">Topic 05</a>
+            <a style="font-size: 20px" href="topic6.html">Topic 06</a>
+            <a style="font-size: 20px" href="topic7.html">Topic 07</a>
+            <a style="font-size: 20px" href="topic8.html">Topic 08</a>
+            <a style="font-size: 20px" href="topic9.html">Topic 09</a>
+            <a style="font-size: 20px" href="topic10.html">Topic 10</a>
+            <a style="font-size: 20px" href="topic11.html">Topic 11</a>
+            <a style="font-size: 20px" href="topic12.html">Topic 12</a>
+            <a style="font-size: 20px" href="topic13.html">Topic 13</a>
+        </div>
+    </div>
+    <div align ="right" ><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div>
+    <!--menu slide  bottom-->
+<body>
+    <h1>Topic 05</h1>
+    <article>
+    <h2>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
+        <hr>
+        <p>History of web storage started with cookies.<br>
+        Web storage is more secure and holds more data.<br>
+        <hr>
+        localStorage is kept even between browser sessions.<br> 
+        This means data is still available when the browser<br>
+         is closed and reopened, and also instantly between tabs and windows.<br>
+        sessionStorage is only available within the browser tab or window session.<br
+        >It’s designed to store data in a single web page session.<br>
+        </p>
+    <h2>Reference links:</h2>
+    <ul>
+        <li>
+            <a style="color: rgb(2, 97, 175)", href="https://www.webfx.com/blog/web-design/introduction-web-storage/" target="_blank">Web FX - Web Storage</a>
+        </li>
+        <li>
+            <a style="color: rgb(2, 97, 175)", href="https://alligator.io/js/introduction-localstorage-sessionstorage/#targetText=localStorage%20and%20sessionStorage%20accomplish%20the,web%20app%20clears%20the%20data." target="_blank">Local and Session storage</a>
+        </li>
+        <li>
+            <a style="color: rgb(2, 97, 175)", href="https://www.w3schools.com/html/html5_webstorage.asp" target="_blank">W3Schools - localStorage and sessionStoreage</a>
+        </li>
+    </ul>
+    </article>
+<div>
+
+        <center><button class = "button", onclick="demoDogs()">variables</button></center> <br><br>
+        <center><button class = "button", onclick="console.clear()">clear console</button></center><br><br>
+
+<pre><code>
+function informationDogs(){
+<h4>string to sessionStorage</h4>
+sessionStorage.setItem(
+"statement", statement); }
+<h4>array created</h4>
+var dogs = ["Scotland Terrier", 
+"Yorkshire Terrier", 
+"Golden Doodle", 
+"Boston Terrier"];
+<h4>string created</h4>
+var statement = "Dogs are better 
+friends than humans. ";
+<h4>object created</h4>
+var myDog = {breed:"Scottie", 
+dogName:"Jovi", gender:"Female", 
+color:"black", age: 1};
+<h4>array & object to localStorage</h4>
+localStorage.setItem("dogs", 
+JSON.stringify(dogs));
+localStorage.setItem("myDog", 
+JSON.stringify(myDog));
+</code></pre>
+            
+    <center><button class = "button", onclick="informationDogs()">output to console</button></center> <br><br>
+    <center><button class = "button", onclick="console.log(sessionStorage)">In session storage</button></center><br><br>
+    <center><button class = "button", onclick="console.clear()">clear console</button></center><br><br>
+    </div>
+
+    <div>
+        <div id="resultLocalStorage" style="overflow: auto"></div><br>
+        <center><button class="button", onclick="demoFavsStorage()">Store a list </button></center><br><br>
+
+        <center><button class="button", onclick="displayFavsStorage()">Display list</button></center><br><br>
+        <p>Save key/value pairs locally:</p>
+        <div id="addItems"></div><br>
+     
+        <div id="addItems"></div><br>
+
+
+
+        <center><button class="button", onclick="resetStorage();displayFavsStorage()">Delete items</button></center>
+        <br><br>
+
+        <center><div id="deleteListNow", style = "color: hsl(0, 99%, 27%)";></div></center>
+    </div>
+</body>
+<script src="scripts/topic5.js"></script>
+<script src="scripts/main.js"></script>
+</html>
