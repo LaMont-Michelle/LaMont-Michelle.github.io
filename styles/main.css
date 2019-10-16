@@ -1,8 +1,8 @@
 
 
 html {
-	margin: 20px;
-	background-color: #EDF5C8;
+	margin: 15px;
+	background-color: #f1e3d3 ;/*#EDF5C8;*/
 }
 
 /* slide menu end */
@@ -68,27 +68,35 @@ body {
 }
 
 h1 {
-	/*color: whitesmoke;*/
+	color:  rgba(40, 158, 69, 0.212); /* rgb(255, 255, 255);*/
 	text-align: center;
 	font-size: 55px;
-	text-shadow: 3px 2px rgb(0, 140, 255);
+	text-shadow: 3px 2px rgb(121, 46, 11);
 
 }
 
 #rcorners1 {
 	border-radius: 25px;
-	background:  rgb(0, 140, 255);
-	padding: 20px;
+	background:  rgb(99, 94, 94);
+	padding: 10px;
 	width: 200px;
-	height: 150px;
-	text-align: center;
+	height: 200px;
+	/*text-align: center;*/
   }
 
 a {
-	
+	font-family: "Arial Black", Gadget, sans-serif;
 	text-decoration: none;
 	font-size: 24px;
-	color:  #EDF5C8;
+	color: black;
+}
+
+.photo-text {
+
+	position: absolute;
+/*	top: 40%;
+	left: 50%; 
+	transform: translate(-50%, -50%);*/
 }
 
 #datatypes {
@@ -110,7 +118,7 @@ a {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
-	background-color: rgb(0, 140, 255);
+	background-color: rgb(29, 104, 23);/* rgb(0, 140, 255);*/
 	color: white;
   }
 
@@ -123,16 +131,16 @@ a {
 	text-decoration: none;
 	outline: none;
 	color: #fff;
-	background-color: rgb(0, 140, 255);
+	background-color: rgb(29, 104, 23); /* rgb(0, 140, 255);*/
 	border: none;
 	border-radius: 15px;
 	box-shadow: 0 9px #999;
   }
 
-.button:hover {background-color: rgb(0, 140, 255)}
+.button:hover {background-color:rgb(29, 104, 23);/* rgb(0, 140, 255)}*/
 
 .button:active {
-  background-color: rgb(0, 140, 255);
+  background-color:rgb(29, 104, 23)/*rgb(0, 140, 255);*/
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
