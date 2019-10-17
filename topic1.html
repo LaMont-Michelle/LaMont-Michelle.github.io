@@ -146,7 +146,7 @@
         </table><hr>
           <p>
           <h4>Demo:</h4>
-              // condition for time of day greeting
+          // conditional statement for social greeting determined by time of day<br><br>
             function timeStatement() {<br>
               var greeting;<br>
               var time = new Date().getHours();<br>
@@ -199,47 +199,49 @@
           </p>
     </article>
 <hr>
-    <article>
-        <h3>ARRAYS</h3>
-        <h4>Demo:</h4>
-        <p>
-          function myArrays()<br>
-          {<br>
-          var array1=[1,2,5,3,10,11];<br>
-          var array2=[9,5,2,4,7];<br>
-          // calling function sumIndex<br>
-          var arraySum =sumIndex(array1, array2);<br>
-          document.getElementById<br>("resultArray").innerHTML = arraySum;<br>
-          }<br>
-        </p>
-        <center><button class="button"; onclick="myArrays()">Go my Arrays</button></center><br><br>
-        <div id="resultArray" style="overflow: auto ; color: hsl(0, 99%, 27%)"></div><br>
-    </article>
+  <article>
+    <h3>ARRAYS</h3>
+    <h4>Demo:</h4>
+    <p>
+      function myArrays()<br>
+      {<br>
+      var array1=[1,2,5,3,10,11];<br>
+      var array2=[9,5,2,4,7];<br>
+      // calling function sumIndex<br>
+      var arraySum =sumIndex(array1, array2);<br>
+      document.getElementById<br>("resultArray").innerHTML = arraySum;<br>
+      }<br>
+    </p>
+    <center><button class="button"; onclick="myArrays()">Go my Arrays</button></center><br><br>
+    <div id="resultArray" style="overflow: auto ; color: hsl(0, 99%, 27%)"></div><br>
+  </article>
     <hr>
     <article>
-        <h3>ASSOCIATIVE ARRAY</h3>
-        <p>
-          //associative array<br>
-          function yourInfo() {<br>
-          var aboutYou = new Object();<br>
-          var yourName = prompt("Enter your name: ");<br>
-          var yourColor = prompt("What is your favorite color");<br>
-          var yourAnimal = prompt("What is your favorite animal? ");<br>
-          aboutYou["Name "]= yourName;<br>
-          aboutYou["Favorite color "] = yourColor;<br>
-          aboutYou["Favorite animal "] = yourAnimal;<br>
-          var completeInfo = "";<br>
-          for(var i in aboutYou) {<br>
-              completeInfo+= i + "= " + aboutYou[i] + '<br>';<br>
-              }<br>
-          document.getElementById<br>("resultInfo").innerHTML = completeInfo;<br>
-          }<br>
-        </p>
-        <center><button class="button"; onclick="yourInfo()"</button>Demo Associative</button></center><br><br>
-        <div id="resultInfo" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div><br><br>
+      <h3>ASSOCIATIVE ARRAY</h3>
+      <p>
+        //associative array<br>
+        function yourInfo() {<br>
+        var aboutYou = new Object();<br>
+        var yourName = prompt("Enter your name: ");<br>
+        var yourColor = prompt("What is your favorite color");<br>
+        var yourAnimal = prompt("What is your favorite animal? ");<br>
+        aboutYou["Name "]= yourName;<br>
+        aboutYou["Favorite color "] = yourColor;<br>
+        aboutYou["Favorite animal "] = yourAnimal;<br>
+        var completeInfo = "";<br>
+        for(var i in aboutYou) {<br>
+        completeInfo+= i + "= " + aboutYou[i] + '<br>';<br>
+        }<br>
+        document.getElementById<br>("resultInfo").innerHTML = completeInfo;<br>
+        }<br>
+      </p>
+      <center><button class="button"; onclick="yourInfo()"</button>Demo Associative</button></center><br><br>
+      <div id="resultInfo" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div><br><br>
     </article>
     <hr>
   </section>
 </body>
+<!--Javascripts-->
 <script src="scripts/main.js"></script>
+<script src="scripts/topic1.js"></script>
 </html>

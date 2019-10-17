@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--the main styles sheet-->
     <link rel="stylesheet" href="styles/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,7 @@
         </div>
     </div>
     <div align ="right" ><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div>
-    <!--menu slide  bottom-->
+<!--menu slide  bottom-->
 <body>
     <h1>Topic 03</h1>
     <article>
@@ -39,10 +40,19 @@
         JSON uses objects represented as strings.<br>
         They can be sent back and forth.<br>
     </p>
+    <ul>
+        <li>
+            <a style="color: rgb(4, 117, 42)", href="https://www.w3schools.com/js/js_json_parse.asp" target="_blank">json()</a>
+        </li>
+        <li>
+            <a style="color: rgb(4, 117, 42)", href="https://www.w3schools.com/js/js_json_stringify.asp" target="_blank">stringify()</a>
+        </li>
+    </ul>
+
     </article>
     <hr>
     <article>
-        <h3> JSON parse() </h3>
+        <h3> demo JSON parse() </h3>
 <div> 
 function informationPerson(){<br>
     var firstName = prompt("Enter your first name: ");<br>
@@ -87,7 +97,7 @@ function informationPerson(){<br>
 <div id="resultJson" style="overflow: auto; color: hsl(0, 99%, 27%)"></div><br>
 <div id="resultJson2" style="overflow: auto; color: hsl(0, 99%, 27%)"></div><br>
 <hr>
-<h3> JSON stringify() </h3>
+<h3> demo JSON stringify() </h3>
 <div >
     function informationStringify(){<br>
     var obj = { name: "Helen", age: 30, city: "TriCity", job: "a super" };<br>
@@ -100,6 +110,7 @@ function informationPerson(){<br>
 </div>
 
 </body>
+<!--Javascripts-->
 <script src="scripts/topic3.js"></script>
 <script src="scripts/main.js"></script>
 </html>
