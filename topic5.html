@@ -59,7 +59,7 @@
     </ul>
     </article>
 <div>
-
+<p>Open the developers tools and see the varibles added to the console and the application storage:</p>
         <center><button class = "button", onclick="demoDogs()">variables</button></center> <br><br>
         <center><button class = "button", onclick="console.clear()">clear console</button></center><br><br>
 
@@ -88,14 +88,16 @@ JSON.stringify(myDog));
 </code></pre>
             
     <center><button class = "button", onclick="informationDogs()">output to console</button></center> <br><br>
-    <center><button class = "button", onclick="console.log(sessionStorage)">In session storage</button></center><br><br>
+    <p>Click to see in the console what is in session storage:</p>
+    <center><button class = "button", onclick="console.log(sessionStorage)">session storage</button></center><br><br>
     <center><button class = "button", onclick="console.clear()">clear console</button></center><br><br>
     </div>
 
     <div>
         <div id="resultLocalStorage" style="overflow: auto"></div><br>
+        <p>Click to make a list: </p>
         <center><button class="button", onclick="demoFavsStorage()">Store a list </button></center><br><br>
-
+        <p>Click to display your list: </p>
         <center><button class="button", onclick="displayFavsStorage()">Display list</button></center><br><br>
         <p>Save key/value pairs locally:</p>
         <div id="addItems"></div><br>

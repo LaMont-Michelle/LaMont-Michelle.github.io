@@ -1,3 +1,5 @@
+
+// Javascript for topic 05
 function demoDogs(){
     localStorage.setItem('canine', 'Kennel Club');
     let val = localStorage.getItem('canine');
@@ -21,10 +23,7 @@ console.log(message);
 let obj = JSON.parse(message);
 console.log(obj);
 console.log(obj.exercise[2]);
-
 }
-
-
 
 function informationDogs(){
     //array
