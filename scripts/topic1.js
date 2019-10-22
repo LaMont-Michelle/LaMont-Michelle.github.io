@@ -17,7 +17,6 @@ function forLoops(){
     document.getElementById("demoLoop").innerHTML = "The numbers are: " + num;
 }
 
-
 function forInLoop() {
 var dogs = " ";
 var terriers = {breed1: "Yorkshire", breed2: "Scottish", breed3:"Boston"};
@@ -27,7 +26,6 @@ types += terriers[x] + " <br>";
     }
 document.getElementById("demoLoop2").innerHTML = "The terriers are: <br>" + types;   
 }
-
 
 // conditional statement demo for social greeting determined by time of day
 function timeStatement() {
