@@ -121,9 +121,24 @@
           document.getElementById("resultLoop")<br>.innerHTML = "The numbers are: "+ num;<br>
           }<br><br>
 
-          <center><button class="button", onclick="forLoops()">Test Loop</button></center><br><br><br>
-          <div id="demoLoop" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div><br>
-        </p>
+          <center><button class="button", onclick="forLoops()">for Loop</button></center><br><br> 
+          <div id="demoLoop" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div>
+        // this function demos the for/in Loop<br>
+        The for/in loops through properties <br>
+        of an object: <br>
+        function forInLoop() {<br>
+          var dogs = " ";<br>
+          var terriers = {breed1:"Yorkshire",<br> breed2: "Scottish", breed3:"Boston"};
+          var types = " ";<br>
+          for (x in terriers) {<br>
+          types += terriers[x] + "  ";<br>
+          }<br>
+          document.getElementById<br>("demoLoop2").innerHTML = "The terriers are: " + types;   
+          }<br>
+        }<br><br>
+        <center><button class="button", onclick="forInLoop()">for-of Loop</button></center><br><br>
+        <div id="demoLoop2" style="overflow: auto ; color: hsl(0, 99%, 27%)";></div>
+      </p>
         <hr>
     <article>
         <h3>CONDITIONALS STATEMENTS</h3>
