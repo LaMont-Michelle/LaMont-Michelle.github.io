@@ -16,6 +16,8 @@ function forLoops(){
     }
     document.getElementById("demoLoop").innerHTML = "The numbers are: " + num;
 }
+
+
 function forInLoop() {
 var dogs = " ";
 var terriers = {breed1: "Yorkshire", breed2: "Scottish", breed3:"Boston"};
