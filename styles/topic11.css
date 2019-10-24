@@ -6,6 +6,8 @@ height: 180px;
 transition: transform 300ms ease-in-out;
 pointer-events: none;
 
+/*transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);*/
+
 }
 
 .trigger {
