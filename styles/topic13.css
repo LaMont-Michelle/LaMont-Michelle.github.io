@@ -1,7 +1,8 @@
 
+    /*start here */
 html {
     background-color: black;
-}
+} 
 
 .box {
     display: inline-block;
@@ -32,11 +33,10 @@ html {
     {width: 300px}    /*can do grow, pause, and grow*/
 
     100%
-    {height: 600px;
+    {height: 500px;
     background: rgb(34, 33, 33);}
 
 }
-
 
 /* THE EARTH */
 @keyframes spin{

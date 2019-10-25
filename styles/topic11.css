@@ -53,7 +53,7 @@ div.square:hover {
     background: aqua;
     width: 180px;
     height: 180px;
-    transition: transform 300ms ease-in-out;
+    /*transition: transform 300ms ease-in-out;*/
     pointer-events: none;
     
     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
@@ -65,10 +65,9 @@ div.square:hover {
     height: 180px;
     border: 20px solid #999;
     background: #ddd;
-    
     }
     
     .trigger:hover .box {
-        transform: translate(200px,150px) rotate(5deg);  /*preview to Topic 12  :)*/
+        transform: translate(200px,150px) rotate(25deg);  /* preview to Topic 12  :)*/
     }
     

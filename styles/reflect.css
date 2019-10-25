@@ -1,7 +1,8 @@
 
 html {
 	margin: 15px;
-	background-color: #f1e3d3 ;
+	background-color:cornsilk;
+	visibility: hidden;              /*reveal later DELETE THIS CODE END OF SEMESTER build journal weekly */
 }
 h1 {
 	color:  rgba(40, 158, 69, 0.212); /* rgb(255, 255, 255);*/
