@@ -137,10 +137,10 @@ a {
 	box-shadow: 0 9px #999;
   }
 
-.button:hover {background-color:rgb(29, 104, 23);/* rgb(0, 140, 255)}*/
+.button:hover {background-color:rgb(29, 104, 23);}
 
 .button:active {
-  background-color:rgb(29, 104, 23)/*rgb(0, 140, 255);*/
+  background-color:rgb(29, 104, 23);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
