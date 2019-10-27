@@ -7,7 +7,7 @@ html {
 .box {
     display: inline-block;
     background: aqua;
-    width: 180px;
+    width: 300px;
     height: 180px;
     position: relative;
     /* short hand*/

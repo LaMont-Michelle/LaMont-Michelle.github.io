@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    body {
+    font-family: 'Lato', sans-serif;
+    }
+    
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+    
+    .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    }
+    
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 15px}
+    .overlay .closebtn {
+    font-size: 30px;
+    top: 15px;
+    right: 35px;
+    }
+    }
+</style>
     <link rel="stylesheet" href="styles/reflect.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Week01 Reflection</title>
 </head>
+<div id="nav-placeholder"></div><br>
 <body>
     <h1 style= "font-size: 55px; text-align: center;">Reflection Journal</h1>
     <h2 style="text-align: center">Fall 2019</h2>
@@ -147,15 +203,28 @@ malipulating the nodes.
     <button type="button" class="collapsible">WEEK 06</button>
     <div class="content">
     <p>   
-        a. Reflect on your learning activities and experience.<br>
+        a. This week was about Topic 11 and 13: CSS3 Transitions and CSS3 animations. 
+        I really enjoyed these topics when I had first thought it was going to be difficult. 
+        I created a couple simple boxes and tested several methods to make them move. 
+        With animation, I was to bounce and lengthen the box.
+        <br>
         <pre>
-i. Consider your openness to new ideas.
-ii. Consider your ability to rationally 
-evaluate options and explain why options are selected.
+i. I did another powerpoint 
+presentation. I feel this works 
+better for me to teach a topic, 
+so I don't loose track of my 
+thoughts.
+ii. Learning about transitions 
+was fun. Then the door opened 
+to animation: letting in the 
+possiblities of endless ideas.
             </pre><hr>
-        b. Reflect on teamwork.<hr>
-        c. Reflect on your communication abilities.<hr>
-        d. Document your growth as it relates to the course outcome.<hr>
+        b. Thursday, I finally had working internet for our meeting. What a relief. 
+        I was able to present my 2 topics and learn from both my teammates. It was a good meeting.
+        It seems we are all keeping up and teaching/learning on schedule. <hr>
+        c. I feel my powerpoints helped me communicate and teach what I learned.<hr>
+        d. Stretching what I think is going to difficult has proven well. So many topics become a 
+        great review, new skill, and strength for the future.<hr>
     </p>
     </div>
     <button type="button" class="collapsible">WEEK 07</button>
@@ -256,4 +325,12 @@ evaluate options and explain why options are selected.
 
 </body>
 <script src="scripts/reflect.js"></script> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$.get("navigation.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
+</script>
+<script src="scripts/main.js"></script>
+
 </html>
