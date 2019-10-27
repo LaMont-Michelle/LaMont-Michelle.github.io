@@ -1,44 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+body {
+    font-family: 'Lato', sans-serif;
+    }
+    
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+    
+    .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    }
+    
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 15px}
+    .overlay .closebtn {
+    font-size: 30px;
+    top: 15px;
+    right: 35px;
+        }
+    }
+</style>
     <link rel="stylesheet" href="styles/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Topic 2</title>
 </head>
+<!--menu slide -->
+<div id="nav-placeholder"></div>
 <body>
-<!--menu slide top -->    
-<div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-            <a href="index.html">Home</a>
-            <a href="reflect.html">Relections</a>
-
-            <a style="font-size: 20px" href="topic1.html">Topic 01</a>
-            <a style="font-size: 20px" href="topic2.html">Topic 02</a>
-            <a style="font-size: 20px" href="topic3.html">Topic 03</a>
-            <a style="font-size: 20px" href="topic4.html">Topic 04</a>
-            <a style="font-size: 20px" href="topic5.html">Topic 05</a>
-            <a style="font-size: 20px" href="topic6.html">Topic 06</a>
-            <a style="font-size: 20px" href="topic7.html">Topic 07</a>
-            <a style="font-size: 20px" href="topic8.html">Topic 08</a>
-            <a style="font-size: 20px" href="topic9.html">Topic 09</a>
-            <a style="font-size: 20px" href="topic10.html">Topic 10</a>
-            <a style="font-size: 20px" href="topic11.html">Topic 11</a>
-            <a style="font-size: 20px" href="topic12.html">Topic 12</a>
-            <a style="font-size: 20px" href="topic13.html">Topic 13</a>
-        </div>
-    </div>
-    <div align ="right" ><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div>
-    <!--menu slide  bottom-->
-
     <h1>Topic 02</h1>
+    <h2>Object Creation Functions, Inheritance, Properties, Methods, Instantiation.</h2>
     <div>
-        <center><button class = "button", onclick= "personInfo()">output to console</button></center><br><br>
+        <article>
+            <ul>
+            <li>
+                <a style="color: rgb(76, 134, 90)", href="https://www.w3schools.com/js/js_object_constructors.asp" target="_blank"> JavaScript Object Constructors</a>
+            </li>   
+            <li>
+                <a style="color: rgb(76, 134, 90)", href="https://www.w3schools.com/js/js_object_methods.asp"target="_blank"> JavaScript Object Methods</a>
+            </li>
+            </ul>
+        </article>
+        <p>
+        //To show a this object (with a method) in the console: <br><br>
+
+        function personInfo(){
+        let person = {
+        given_name: "Vivian",
+        last_name: "LaMont",
+        nick_name: "Vivie",
+        grade: 8,
+        age: 22,
+        updateAge: function(){
+            return ++person.age;}
+        }
+        console.log(person + updateAge);
+        }   <br><br>
+        LOOK in console >>>>> <br>
+        the method increments the age       
+          </p>
+        <center><button class = "button", onclick= "personInfo()">click here</button></center><br><br>
     </div>
 
+    <!---->
+<div id="main">
+    <div class="inner">
+    
+
+    <h2 style="color:rgb(17, 70, 35)">Class and inheritances</h2>
+    <div style="font-weight: bold">
+        <p>
+        // function to show imputs from user<br>
+        //this is the parent class
+        // the constructor for the Canine class
+        // defines and sets them </p>
+        <pre>
+class Canine{
+constructor(breed) {  
+this.caninename = breed;  
+}
+present() {
+return 'Your dog is a ' + 
+this.caninename;
+}
+}
+
+//this child class using the 
+keyword "extends"
+class Group extends Canine {                  
+constructor(breed, dogGroup, 
+size, color) {
+super(breed);
+// super is calling parent class 
+constructor.
+this.group= dogGroup;
+this.size = size;   
+this.color = color;                   
+}
+
+show() {   
+return this.present() + ', your
+canine group is: ' + this.group + 
+', and the size is: '+ this.size 
++ ' And your canine is color: ' 
++ this.color + ". ";
+}
+showCanine(){
+var date = new Date();
+var currentYear = 
+date.getFullYear();
+currentYear += 1;
+var showData = 
+{breed:this.present(), 
+    group:this.group, 
+    size:this.size, 
+    color: this.color};
+var txt = "";
+var x;
+for (x in showData) {
+
+    txt += showData[x] + " "; 
+}
+return txt + 
+" The dog show will be in 
+February" 
++ currentYear;
+}
+}
+
+// prompts to user to create
+the class  
+function informationCanines(){
+var breed = prompt
+("Enter breed of dog ");
+var group = prompt
+("Enter group of your dog ");
+var size = prompt
+("Enter size of your dog ");
+var color = prompt
+("Enter the color of your dog ");
+
+mydog = new Group(breed, group,
+size, color);
+document.getElementById
+("resultCanines").innerHTML 
+= mydog.show();   
+
+if (confirm('Would you like to 
+show your dog?')) {
+//Save it!
+alert("Your local dog show entry 
+fee is the amount of: " + 
+mydog.showCanine());
+}
+else
+{
+alert( "Please if you change your 
+mind, we'd love to have your dog 
+in the show!")
+}
+}        </pre>
+</div>
+<div>
+        <h3>This button shows how inheritance is used between classes.</h3>
+        <button class="button" onclick="informationCanines()">Inheritance</button><br><br>
+        <div id="resultCanines" style="overflow: auto; color: hsl(0, 99%, 27%);"></div>
+</div>
+<div>
+        <h3>This button implements a static function. </h3> 
+<pre>
+// add a country for the Dog Show
+class Country{
+constructor(country) {
+this.showCountry = country;
+}
+static showCountry(c) {
+return "Using Static...
+The country for the dog show is:
+    " + c.showCountry;
+}
+}
+function addInfoShow(){
+
+var country = prompt("Enter dog 
+show's country");
+mydog = new Country(country);
+document.getElementById
+("addCountry")
+.innerHTML=Country.
+showCountry(mydog);
+}
+</pre>
+        <button class="button" onclick="addInfoShow()">Add Info to class</button><br><br>
+    <div id="addCountry" style="overflow: auto; color: hsl(0, 99%, 27%)"></div><br><br>
+</div>
+</div>
+</div> 
 </body>
+<!--Javascripts-->
 <script src="scripts/topic2.js"></script>
 <script src="scripts/main.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$.get("navigation.html", function(data){
+$("#nav-placeholder").replaceWith(data);
+});
+</script>
 </html>

@@ -1,21 +1,5 @@
 
-// add a link to the div class "box" 
-function addLink() {
-let box = document.querySelector(".box");
-// create
-let newElement = document.createElement("a");
-
-// former way to create text node
-let newContent = document.createTextNode("This text is now link!");
-newElement.appendChild(newContent);
-
-// append child node a that was created
-box.appendChild(newElement);
-newElement.setAttribute("href", "https://www.churchofjesuschrist.org/?lang=eng");
-}
-
-
-// css demonstation
+// css demonstation with querySeletor
 
 function changeTitleColor(){
     document.querySelector("h2").style.color = "green";
@@ -25,18 +9,28 @@ function changeTitleColor(){
 function changeTitle(){
 
 document.querySelector("h2").style.textAlign = "left";
-/*
-document.querySelector("h2").style.fontSize = "5px";
-document.querySelector("h2").style.fontSize = "50px";
-*/
-// passing as a string write like style sheet
-/*
-document.querySelector("h2").style.cssText = "color: red, font-size = 25px";
-*/
 document.querySelector("h2").style.backgroundColor = "yellow";
 }
 
-//  some survey boxes move
+
+// add a link to the div class "box" 
+function addLink() {
+    let box = document.querySelector(".box");
+    
+    // create
+    let newElement = document.createElement("a");
+
+    let newContent = document.createTextNode("This text is now link!");
+    newElement.appendChild(newContent);
+    
+    // append child node a that was created
+    box.appendChild(newElement);
+    newElement.setAttribute("href", "https://www.churchofjesuschrist.org/?lang=eng");
+    }
+
+
+
+//  some survey boxes move using 'getElementByID"
 function hideBox(){
     document.getElementById('no').style.visibility = 'hidden';
 }
