@@ -18,7 +18,7 @@ a.example1:hover {
     background-color: black;
 }
 
-/*square inside box*/
+/*changing square inside box*/
 div.example2{
     width: 300px;
     height: 300px;
@@ -49,7 +49,7 @@ div.square:hover {
     transform: rotate(180deg);
 }
 
-/* inflate box */
+/* inflate a box */
 .example3 {
     border: 1px solid pink;
     background-color:  #999;
@@ -69,7 +69,7 @@ div.square:hover {
     -webkit-transition: width 4s;
     transition: width 4s;
 }
-/* example 4 */
+/* example 4 with cubic bezier */
 .box {
     display: inline-block;
     background: aqua;
