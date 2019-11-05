@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Topic 11</title>
-
 <style>
   body {
     font-family: 'Lato', sans-serif;
@@ -69,31 +68,48 @@
 </head>
 <div id="nav-placeholder"></div>
 <body>
-  <h1 style="color: cornflowerblue">Topic 11</h1>    
-
-  <a class="example" href="index.html">CIT 261 Home Page</a>
-  <a class="example" href="topic12.html">Next Lesson - Topic 12</a><br><br><br>
+  <h1 style="color: cornflowerblue">Topic 11</h1>
+  <h3>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries</h3>
+  <img src="images/transition.png" alt="transition" width="350" height="90">
+<p>transition-propery: define what propery to apply effect<br>
+transition duration: define the duration of a transition.<br>
+transition-timing-function: define a funciton that specifies transition animation speed<br>
+</p>
+  <ul>
+    <li>Ease: slow start, then fast, then end slow.</li>
+    <li>Linear: same speed start to end.</li>
+    <li>Ease-in: slow start.</li>
+    <li>Ease-out: slow end.</li>
+    <li>Ease-in-out: slow start and end.</li>
+  </ul>
+<p>transition-delay: define a length of time to delay a start of a transition.</p>
   <hr>
-  <div class="container">
-      <div class="square">Hover here :) </div>
+<h3>HTML and CSS create this hover transition:</h3>
+  <div><a class="example1" href="index.html">CIT 261 Home Page</a></div>
+  <div><a class="example1" href="topic12.html">Next - Topic 12</a></div><br>
+  <br><br>  
+  <hr>
+  <h3>Hover transition to grow the square and change color:</h3>
+  <div class="example2">
+      <div class="square">Hover here </div>
   </div>
   <hr>
+  <div class="example3">
+      <h1><small>inflate!</small></h1>
+  </div>
+<hr>
 
+<h3>rotate square timing with <br>
+  cubic-bezier:</h3>
   <!--the box code-->
 <div class="trigger">
     <div class="box"></div>
-  </div>
+</div>
 
   <br><br><br><br><br><br>
+  <p style="color: cornflowerblue">use developers tools for cubic-bezier or:</p>
+  <a style="color:maroon", href="https://cubic-bezier.com/#.02,.97,.98,.03", target="_blank" >cubic-bezier site</a>
 </body>
-<!--
-<script>
-(document).ready(function(){
-    ("trigger").click(function(){
-        ("p").toggleClass("main");
-    });
-  });</script>
--->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 $.get("navigation.html", function(data){

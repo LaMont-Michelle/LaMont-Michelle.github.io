@@ -57,6 +57,7 @@
     }
 </style>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/topic9.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -67,7 +68,120 @@
     <h1>Topic 09</h1>
     <h3>Standard JavaScript Events Including those for Mobile Devices and Animation and Transition Events
         </h3>
+        <button onclick="bgChange()">Press me</button>
+        <hr>
+        <h2>EVENTS:</h2>
+<div class="flexOnload">
+    <div>
+        <div>
+            <p>onload</p>
+        </div>
+        <div id="box1" class="container container-one">
+            <div id="spin"></div>
+        </div>
+    </div>
+    <div> 
+        <div>
+            <p>focus</p>
+        </div>
+        <div id="box2" class="container container-two">
+            <form>
+                <input id="focus" type="text" class="field" placeholder="Click Here">
+            </form>
+        </div>
+    </div>
+    <div> 
+    <div>
+        <p>click</p>
+    </div>
+    <div id="box3" class="container container-three">
+        <div id="scale" onclick="scale(this)"><p>Click me</p></div>
+    </div>
+    </div>
+    <div>
+        <div>
+            <p><br></p>
+        </div>
+        <div id="box3a" class="container container-three">
+            <div id="time" onclick="displayDate()"><p>click for date/time</p></div>
+            <p id="display" style="color: #7fb394"></p></p>
+        </div>
+    </div>
+    <div>
+            <div>
+                <p> mousedown/up</p>
+            </div>
+            <div id="box5" class="container container-five">
+                <p id="tip2">Hold Down</p>
+            </div>
+        </div>
+    <div> 
+        <div>
+            <p> onmouse </p>
+        </div>
+        <div id="box4" class="container container-four">
+            <p id="tip1">Hover here</p>
+            <p id="quote">"I solumly swear that I am up to no good."</p>
+        </div>
+    </div>
 
+    <div>
+        <div>
+            <p> keyboard </p>
+        </div>
+        <div id="box6" class="container container-six">
+            <form>
+                <input id="press" type="text" class="field" placeholder="Enter a string">
+                <input id="release" type="text" class="field" placeholder="Enter a string">
+            </form>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p> animation </p>
+        </div>
+        <div id="box0" class="container container-zero">
+            <p id="anime">Click Me</p>
+        </div>
+    </div>
+</div>
+
+<h3>Mobile devices events</h3>
+<p>Test on a mobile device</p>
+
+<div class="flexOnload">
+    <div> <!--load2-->
+        <div>
+            <p> touchstart </p>
+        </div>
+        <div id="box7" class="container container-one">
+            <p>Tap Me</p>
+            <p id="counter">0</p>
+        </div>
+    </div>
+
+    <div> <!--load2-->
+        <div>
+            <p> touchstart/end </p>
+        </div>
+        <div id="box8" class="container container-eight">
+            <p>Tap & Hold</p>
+        </div>
+    </div>
+
+    <div> <!--load2-->
+        <div>
+            <p> touchmove /p>
+        </div>
+        <div id="box9" class="container container-nine">
+            <p>Drag Around</p>
+            <p id="coordinates">0, 0</p>
+        </div>
+    </div>
+
+</div>
+       
+  
 
     <p>(Ex. onTouchBegin, onLoad, etc.) </p>
 
@@ -81,11 +195,12 @@
 
 
 
-    
+    <!-- BUTTON CODE IF NEEDED
     <div> 
     <center><button class = "button", onclick="console.log('Hello World')"> hey hello! </button></center><br><br>
     <center><button class = "button", onclick="console.clear()">clear console</button></center><br><br>
     </div>
+-->
 </body>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
@@ -94,4 +209,5 @@ $.get("navigation.html", function(data){
 });
 </script>
 <script src="scripts/main.js"></script>
+<script src="scripts/topic9.js"></script>
 </html>
