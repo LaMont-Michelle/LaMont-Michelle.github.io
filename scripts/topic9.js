@@ -91,6 +91,7 @@ release.onkeyup = function(){
 // end of 6
 
 // animation
+/*
 let anime = document.getElementById('anime');
 anime.addEventListener('click',function () {
     anime.classList.add('spin');
@@ -130,7 +131,7 @@ tstart.addEventListener('touchstart',function () {
 tstart.addEventListener('touchend',function () {
     return false;
 });
-
+*/
 // end animation box
 
 
