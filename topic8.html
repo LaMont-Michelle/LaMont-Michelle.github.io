@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Topic 8</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/topic8.css">
     <style>
     body {
         font-family: 'Lato', sans-serif;
@@ -58,18 +60,66 @@
         top: 15px;
         right: 35px;
         }
-        }
-    
-        span  {
-        color: cornflowerblue;
-        }
+    }
     </style>
 </head>
 <div id="nav-placeholder"></div>
 <body>
     <h1>Topic 08</h1>
-    <p>some code here</p>
+    <center><button type="button" onclick="textChange()">toggle title</button></center>
+    <div class="example" id="clearfix">
+        <h2 id="changingText">Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2>
+    </div>
+    <hr>
+    <ul></ul>
+    <li><a style="color: rgb(76, 134, 90);font-size: 18px", href="https://www.w3schools.com/jsref/prop_style_transition.asp" target="_blank" >w3schools Transitions link</a></li>
+    <li><a style="color: rgb(76, 134, 90);font-size: 18px", href="https://www.w3schools.com/js/js_htmldom_animate.asp" target="_blank" >w3schools Animations link</a></li>
+    </ul>
+    <hr>
+    <p>Triggering a menu transition with JavaScript:</p>
+<code>function toggleNav() {
+        let updateElement = document.getElementById("menu-icon");<br><br>
+    // toggle adds or removes a class attribute accordingly (the class name is used by CSS)br
+        updateElement.classList.toggle("open");<br>
+    }</code><br>
+<div class="flex">
+    <div class="container1">
+        <div class="sidenav" id="menu-icon" onclick="toggleNav()">
+            <div class="menu-icon" id="stay-there">
+                <div class="bars">    <!--the hamburger menu bars-->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="nav">
+                    <a class="menu-link" href="#">Home</a>
+                    <a class="menu-link" href="#">Page1</a>
+                    <a class="menu-link" href="#">Page2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<h2>Compare</h2>
+<h3><a style="color: rgb(76, 134, 90);font-size: 18px", href="https://cssanimation.rocks/transition-vs-animation/" target="_blank" >Transitions vs Animations link</a></h3>
+<p>Transitions are used for creating a smooth transition from one state to another, and animations for more complex series of movements. 
+Animations use "keyframes" to specify what styles each element will have at which time, and loops can be added for effect.
+</p>
+<div class="flex">
+        <div id="box1-2" class="container2 containerCompare">
+            <p id="boxT" style="color: wheat" >Transition </p>
+                <div id="trans"></div>
+            </div>
+        <div id="box1" class="container2 containerCompare">
+            <p id="boxA" style="color: wheat" >Animation </p>
+            <div id="animate"></div>
+        </div>
+    </div>
+    <br><hr>
 </body>
+<!--Scripts-->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 $.get("navigation.html", function(data){
@@ -77,4 +127,5 @@ $.get("navigation.html", function(data){
 });
 </script>
 <script src="scripts/main.js"></script>
+<script src="scripts/topic8.js"></script>
 </html>
