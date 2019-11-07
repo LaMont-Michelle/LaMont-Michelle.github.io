@@ -6,33 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Topic 6</title>
+<style>
+    body {
+    font-family: 'Lato', sans-serif;
+    }
+    
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+    
+    .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    }
+    
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 15px}
+    .overlay .closebtn {
+    font-size: 30px;
+    top: 15px;
+    right: 35px;
+    }
+    }
+</style>
 </head>
-<!--menu slide top -->    
-<div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-            <a href="index.html">Home</a>
-            <a href="reflect.html">Relections</a>
-
-            <a style="font-size: 20px" href="topic1.html">Topic 01</a>
-            <a style="font-size: 20px" href="topic2.html">Topic 02</a>
-            <a style="font-size: 20px" href="topic3.html">Topic 03</a>
-            <a style="font-size: 20px" href="topic4.html">Topic 04</a>
-            <a style="font-size: 20px" href="topic5.html">Topic 05</a>
-            <a style="font-size: 20px" href="topic6.html">Topic 06</a>
-            <a style="font-size: 20px" href="topic7.html">Topic 07</a>
-            <a style="font-size: 20px" href="topic8.html">Topic 08</a>
-            <a style="font-size: 20px" href="topic9.html">Topic 09</a>
-            <a style="font-size: 20px" href="topic10.html">Topic 10</a>
-            <a style="font-size: 20px" href="topic11.html">Topic 11</a>
-            <a style="font-size: 20px" href="topic12.html">Topic 12</a>
-            <a style="font-size: 20px" href="topic13.html">Topic 13</a>
-        </div>
-    </div>
-    <div align ="right" ><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div>
-    <!--menu slide  bottom-->
+<div id="nav-placeholder"></div>
 <body>
     <h1>Topic 06</h1>
+<h3>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h3>
+
+<ul>
+    <li><a style="color: rgb(76, 134, 90)", href="https://www.w3schools.com/js/js_htmldom_navigation.asp" target="_blank"> JavaScript HTML DOM Navigation</a></li>
+    <li><a style="color: rgb(76, 134, 90)", href="https://www.w3schools.com/js/js_htmldom_nodes.asp" target="_blank"> JavaScript HTML DOM Elements (Nodes)</a></li>
+</ul>
+
+<hr>
+<h3>createElement()</h3>
+<p>We can use DOM to create a new element on our page. Click the button to add a new paragraph</p>
+<center><button class="button" type="button" onclick="createDemo()"> CREATE</button></center>
+<div style="background-color:rgb(156, 136, 112);" id="textDemo"></div>
+<br>
+<hr>
+<h3>appendChild()</h3>
+<p>Instead of creating a new element, change the existing list element with appendChild().
+"list item"" is a child of "ordered list" The button will add a new terrier to the list.
+</p>
+<ol id="terriers">
+    <li>Airendale Terrier</li>
+    <li>Yorkshire Terrier</li>
+    <li>Scottish Terrier</li>
+</ol>
+<center><button class="button" type="button" onclick="addListItem()"> ADD </button></center>
+<br>
+<hr>
+<h3>insertBefore()</h3>
+<p>Add to the top of this list with insertBefore().  </p>
+<ol id="terriers2">
+    <li>Airendale Terrier</li>
+    <li>Yorkshire Terrier</li>
+    <li>Scottish Terrier</li>
+    <li>Boston Terrier</li>
+</ol>
+<center><button class="button" type="button" onclick="addFirst()">INSERT</button></center>
+<br>
+<hr>
+<h3>removeChild()</h3>
+<p> Removing an item with removeChild().</p>
+<ol id="terriers3">
+    <li>Fox Terrier</li>
+    <li>Airendale Terrier</li>
+    <li>Yorkshire Terrier</li>
+    <li>Scottish Terrier</li>
+    <li>Boston Terrier</li>
+</ol>
+<center><button class="button" type="button" onclick="removeItem()">REMOVE</button></center>
+<br>
+<hr>
+<div id="overstate">
+<p id="cats">Some people like cats.</p>
+<p id="dogs">When someone tells me they aren't a dog person, all I hear is, "blah, blah, blah I'm a phychopath."</p>
+</div>
+<center><button class="button" type="button" onclick="replacePhrase()">REPLACE</button></center>
+<br>
+<hr>
 </body>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$.get("navigation.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
+</script>
 <script src="scripts/main.js"></script>
+<script src="scripts/topic6.js"></script>
 </html>
