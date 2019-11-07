@@ -1,0 +1,135 @@
+/* text set up */
+p{
+    color: #96897b;
+    font-size: 1.2em;
+    text-align: center;
+}
+/* flex boxes */
+.flexOnload {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: start;
+}
+.flex2{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 2em;
+}
+
+.container {
+    height: 15em;
+    width: 15em;
+    background-color: #7fb394;
+    margin: 0 .5em;
+}
+
+/* onload */
+#box1, #box3, #box5, #scale, #box7, #box8, #box0{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#box2, #box3a, #box4, #box6{
+    background: #0c5460;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+form{
+    text-align: center;
+}
+
+#spin,#scale{
+    width: 5em;
+    height: 5em;
+    background: #0c5460;
+}
+
+#scale{
+    transition: transform 1.5s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 2  */
+::placeholder{
+    color: #7fb394; /*https://www.w3schools.com/cssref/sel_placeholder.asp*/
+}
+
+input{
+    padding: .7em;
+    width: 9em;
+    text-align: center;
+    font-size: 1.1em;
+    margin: .5em 0 0 .5em;
+    background: #ebe669;
+    color: rgb(61, 121, 12);   /* input color */
+    border: solid 2px whitesmoke;/* #C2C2C2;*/
+    outline: none;
+    box-sizing: content-box;
+}
+/* 3 */
+.scale{
+    transform: scale(3);
+    transition: transform 1.5s linear;
+}
+
+#scale p{
+    font-family: 'Amatic SC';
+    color: #ebe669;
+}
+
+
+/* 3 b */
+#time p{
+    font-family: 'Amatic SC', cursive;
+    color:#ebe669;/* #0c5460;*/
+}
+
+/* 5  */
+#box5 p{
+    font-family: 'Amatic SC', cursive;
+    color: #0c5460;
+    font-size: 1.5em;
+}
+#quote {padding: 5px;}
+
+
+/* 7*/ 
+#box7{
+    position: relative;
+    z-index: 2;
+    border: solid 2px #0c5460;
+
+    /* disable non-standard gestures (like double tap to zoom) */
+    touch-action: manipulation;
+}
+
+#box7 p:first-child{
+    position: absolute;
+    z-index: -1;
+    font-family: 'Amatic SC', cursive;
+    color: #0c5460;
+    font-size: 5em;
+    opacity: .35;
+    top: 25%;
+    left: 20%;
+}
+
+#box7 p:last-child{
+    color: #0c5460;
+    font-size: 5em;
+}
