@@ -1,0 +1,19 @@
+body {
+background-color:olive;
+}
+
+section {
+    background-color: rgb(211, 109, 45);
+    align-content: center;
+}
+
+video {
+background-color: purple;
+/*text-align: center; */
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <link rel="stylesheet" href="styles/topic10.css">
+        <link rel="stylesheet" href="styles/main.css">
 <style>
 body {
     font-family: 'Lato', sans-serif;
@@ -57,7 +59,7 @@ body {
     }
 
     span  {
-    color: cornflowerblue;
+    color: purple;
     }
 </style>    
     <meta charset="UTF-8">
@@ -66,8 +68,47 @@ body {
     <title>Topic 10</title>
 </head>
 <div id="nav-placeholder"></div>
-<body>
+
     <h1>Topic 10</h1>
+<body>
+
+    <section>
+        <br>
+    <video class="center" width="320" height="240" controls> <!--width="300" height="225"-->
+        <source src="2014 _Crest_Halloween_Commercial.mp4" type="video/mp4">
+      </video>
+        <br>
+    </section>
+    <br>
+    <section>
+            <canvas class="center" id="canvasExample" width="320" height="240" style="border:2px dashed black;">
+                </canvas>
+                <br>
+                <button style="background: purple" class="button" type="button" onclick="drawX()">Click to draw an X</button>
+                <button style="background: purple" class="button" type="button" onclick="drawO()">Click to draw an O</button>
+            </section>
+            <br><br>
+
+<!--
+        <canvas id="myCanvas" width="200" height="100"
+        style="border:1px solid black">
+        <script>
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "purple";
+                ctx.fillRect(0,0,180,90);
+            </script>
+        </canvas> 
+    </section>-->
+
+
+    <section>
+<h2 class="center" >Witch Doctor - Ooh Eeh Ooh Ah Aah Ting Tang Walla Walla Bing</h2>
+    <audio class="center" controls>
+            <source src="Witch_Doctor.mp3" type="audio/mpeg">
+            </audio>
+
+    </section>
 </body>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
@@ -76,4 +117,5 @@ $.get("navigation.html", function(data){
 });
 </script>
 <script src="scripts/main.js"></script>
+<script src="scripts/topic10.js"></script>
 </html>
