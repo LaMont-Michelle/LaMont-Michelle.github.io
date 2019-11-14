@@ -2,7 +2,7 @@
 h2#changingText {
     color: black;
     font-size: 30px;
-    border: black, 2px,2px,2px,2px;
+    border: 2px black;
     transition: color 5s, font-size 5s;
 }
 
