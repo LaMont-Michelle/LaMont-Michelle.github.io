@@ -12,6 +12,16 @@ function drawO() {
 var canvas = document.getElementById("canvasExample");
 var ctx = canvas.getContext("2d");
 ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
+ctx.arc(240,90,40,0,2*Math.PI);
+ctx.strokeStyle = "#a132cd";
 ctx.stroke();
+}
+
+function fill0()  {
+var canvas = document.getElementById("canvasExample");
+var ctx = canvas.getContext("2d"); 
+/*ctx.beginPath();*/
+ctx.arc(240,90,40,0,2*Math.PI);
+ctx.fillStyle = "purple";
+ctx.fill();
 }
