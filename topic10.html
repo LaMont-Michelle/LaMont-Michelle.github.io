@@ -71,15 +71,24 @@ body {
 
     <h1>Topic 10</h1>
 <body>
-
+        <h2>the video tag </h2>
     <section>
         <br>
-    <video class="center" width="320" height="240" controls> <!--width="300" height="225"-->
+    <video class="center" id="video" width="320" height="240" controls> <!--width="300" height="225"-->
         <source src="2014 _Crest_Halloween_Commercial.mp4" type="video/mp4">
       </video>
         <br>
+    <p>Button Controls</p>
+    <div style="text-align:center"> 
+        <button class="button" style="background: purple" onclick="controlPlay()">Play/Pause</button>
+        <button class="button" style="background: purple" onclick="makeBig()">big</button>
+        <button class="button" style="background: purple" onclick="makeSmall()">small</button>
+        <button class="button" style="background: purple" onclick="resetSize()">reset</button>
+        </div>
+        <br><br>
     </section>
     <br>
+    <h2>the canvas tag </h2>
     <section>
             <canvas class="center" id="canvasExample" width="320" height="240" style="border:2px dashed black;">
                 </canvas>
@@ -88,13 +97,44 @@ body {
                     <center><button style="background: purple" class="button" type="button" onclick="drawO()">Click to draw an O</button></center><br>
                     <center><button style="background: purple" class="button" type="button" onclick="fill0()">Fill the O</button></center>
             </section>
-            <br><br>
+            <br>
+<h2>the svg tag </h2>
+<h4>SVG stands for Scalable Vector Graphics</h4>
+<ul>
+<li> SVG is used to define vector-based graphics for the Web</li>
+    <li>    SVG defines the graphics in XML format</li>
+    <li>Every element and every attribute in SVG files can be animated</li>
+    <li> SVG is a W3C recommendation</li>
+    <li>SVG integrates with other W3C standards such as the DOM and XSL</li>
+</ul>
+    <svg class="center" eight="140" width="140" style="background: orange">
+    <defs>
+        <filter id="f4" x="0" y="0" width="200%" height="200%">
+        <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+        <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+        values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+        <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+    <rect width="90" height="90" stroke="green" stroke-width="3"
+    fill="yellow" filter="url(#f4)" />
+    </svg>
+<br>
     <section>
-<h2 class="center" >Witch Doctor - Ooh Eeh Ooh Ah Aah Ting Tang Walla Walla Bing</h2>
-    <audio class="center" controls>
-            <source src="Witch_Doctor.mp3" type="audio/mpeg">
-            </audio>
         <br>
+        <h2>the audio tag </h2>
+        <hr>
+<h2 class="center" >Witch Doctor - Ooh Eeh Ooh Ah Aah Ting Tang Walla Walla Bing</h2>
+<p>With Controls</p>
+    <audio class="center" id="audio" controls>
+    <source src="Witch_Doctor.mp3" type="audio/mp3">
+    </audio>
+<br>
+    <p>Button Control</p>
+    <div style="text-align:center"> 
+    <button class="button" style="background: purple" onclick="controlAudio()">Play/Pause</button><br>
+    </div><br>
     </section>
 </body>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
