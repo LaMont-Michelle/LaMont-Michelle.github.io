@@ -73,7 +73,21 @@ newElement.setAttribute("href",
         }</pre>    
      <button class="button" onclick="addLink()">Add link</button><br><br>
     </div>
-<!-- now lets have some fun:   -->
+<div>
+    <p>This javascript changes the css with classList.add() method: </p>
+        <div id="myDIV"> 
+            <code>function useClassList() {
+                document.<br>getElementById("myDIV").<br>classList.add("mystyle");
+              }
+            </code>
+            </div> <br>
+<button class="button" onclick="useClassList()">classList.add()</button>
+<br><p>next use classList.toggle() to switch to new css style: </p>
+<button class="button" onclick="toggleScript()">classList.toggle()</button>
+<p> now use classList.remove() to reset the state: </p>
+<button class="button" onclick="removeState()">classList.remove()</button>
+</div>
+<p>now lets have some fun: </p>
 <div class="container">
     <!--the xmp tag is deprecated-->
     <pre>

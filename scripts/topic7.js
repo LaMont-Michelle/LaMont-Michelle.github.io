@@ -1,17 +1,14 @@
 
 // css demonstation with querySeletor
-
 function changeTitleColor(){
     document.querySelector("h2").style.color = "green";
     document.querySelector("h2").style.textAlign = "right";
 }
 
 function changeTitle(){
-
 document.querySelector("h2").style.textAlign = "left";
 document.querySelector("h2").style.backgroundColor = "yellow";
 }
-
 
 // add a link to the div class "box" 
 function addLink() {
@@ -28,8 +25,20 @@ function addLink() {
     newElement.setAttribute("href", "https://www.churchofjesuschrist.org/?lang=eng");
     }
 
+// using classList 
+function useClassList() {
+    document.getElementById("myDIV").classList.add("mystyle");
+  }
 
+  function toggleScript() {
+    document.getElementById("myDIV").classList.toggle("newStyle");
+  }
 
+//var item = document.getElementById("myDIV"); 
+function removeState() {
+    document.getElementById("myDIV").classList.remove("mystyle","newStyle");
+}
+  
 //  some survey boxes move using 'getElementByID"
 function hideBox(){
     document.getElementById('no').style.visibility = 'hidden';
@@ -62,7 +71,7 @@ function hideBox(){
 }
 
 function showBox(){
-  document.getElementById('no').style.visibility = 'visible';
+    document.getElementById('no').style.visibility = 'visible';
 }
 
 document.getElementById('Qcontainer1').addEventListener("mouseenter", hideBox);

@@ -1,9 +1,19 @@
 .mystyle {
-    width: 300px;
-    height: 50px;
-    background-color: coral;
+    width: 350px;
+    height: 200px;
+    background-color: goldenrod;
     color: white;
     font-size: 25px;
+  }
+
+  .newStyle {
+    width: 250px;
+    height: 120px;
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 15px;
+    color: navy;
+    margin-bottom: 10px;
   }
 
   #questionBox1 {
