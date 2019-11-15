@@ -20,7 +20,7 @@ function addLink() {
     // create
     let newElement = document.createElement("a");
 
-    let newContent = document.createTextNode("This text is now link!");
+    let newContent = document.createTextNode("This text is now a link!");
     newElement.appendChild(newContent);
     
     // append child node a that was created

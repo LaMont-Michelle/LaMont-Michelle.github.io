@@ -1,66 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/main.css">    
+    <title>Topic 6</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Topic 6</title>
-<style>
-    body {
-    font-family: 'Lato', sans-serif;
-    }
-    
-    .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-    }
-    
-    .overlay-content {
-    position: relative;
-    top: 10%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    }
-    
-    .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 30px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    }
-    
-    .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-    }
-    
-    .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 50px;
-    }
-    
-    @media screen and (max-height: 450px) {
-    .overlay a {font-size: 15px}
-    .overlay .closebtn {
-    font-size: 30px;
-    top: 15px;
-    right: 35px;
-    }
-}
-</style>
+    <link rel="stylesheet" href="styles/main.css">   
 </head>
 <div id="nav-placeholder"></div>
 <body>
@@ -122,6 +67,7 @@
 <br>
 <hr>
 </body>
+<!-- Javascripts -->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 $.get("navigation.html", function(data){

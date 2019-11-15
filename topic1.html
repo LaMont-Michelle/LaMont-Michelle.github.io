@@ -1,37 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Topic 1 : Loops</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Topic 1 : Loops</title>
+    <link rel="stylesheet" href="styles/main.css">
 
 </head>
-<!--menu slide top -->    
-<div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-        <a href="index.html">Home</a>
-        <a href="reflect.html">Relections</a>
+<!-- menu slide-->
+<div id="nav-placeholder"></div>
 
-        <a style="font-size: 20px" href="topic1.html">Topic 01</a>
-        <a style="font-size: 20px" href="topic2.html">Topic 02</a>
-        <a style="font-size: 20px" href="topic3.html">Topic 03</a>
-        <a style="font-size: 20px" href="topic4.html">Topic 04</a>
-        <a style="font-size: 20px" href="topic5.html">Topic 05</a>
-        <a style="font-size: 20px" href="topic6.html">Topic 06</a>
-        <a style="font-size: 20px" href="topic7.html">Topic 07</a>
-        <a style="font-size: 20px" href="topic8.html">Topic 08</a>
-        <a style="font-size: 20px" href="topic9.html">Topic 09</a>
-        <a style="font-size: 20px" href="topic10.html">Topic 10</a>
-        <a style="font-size: 20px" href="topic11.html">Topic 11</a>
-        <a style="font-size: 20px" href="topic12.html">Topic 12</a>
-        <a style="font-size: 20px" href="topic13.html">Topic 13</a>
-    </div>
-</div>
-<div align ="right" ><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div>
-<!--menu slide  bottom-->
 <center><img src="images/succulent-1.png" alt="1" height="200" width="200"></center >
 <body>
   <section>
@@ -257,6 +236,12 @@
   </section>
 </body>
 <!--Javascripts-->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$.get("navigation.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
+</script>
 <script src="scripts/main.js"></script>
 <script src="scripts/topic1.js"></script>
 </html>
