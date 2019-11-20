@@ -71,7 +71,7 @@ h1 {
 	color:  rgba(40, 158, 69, 0.212); /* rgb(255, 255, 255);*/
 	text-align: center;
 	font-size: 55px;
-	text-shadow: 3px 2px rgb(121, 46, 11);
+	text-shadow: 3px 2px rgb(75, 73, 73);/*rgb(121, 46, 11);*/
 
 }
 
@@ -118,7 +118,7 @@ a {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
-	background-color: rgb(29, 104, 23);/* rgb(0, 140, 255);*/
+	background-color: rgb(29, 104, 23);
 	color: white;
   }
 

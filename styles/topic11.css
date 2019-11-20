@@ -65,8 +65,6 @@ div.square:hover {
     height: 170px;
     padding: 100px;
     border-radius:40%;
-
-    -webkit-transition: width 4s;
     transition: width 4s;
 }
 /* example 4 with cubic bezier */

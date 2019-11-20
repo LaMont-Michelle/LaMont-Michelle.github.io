@@ -1,6 +1,6 @@
 .container {
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -31,4 +31,48 @@
 }
 .box3:hover {
     transform: rotate(-100deg);
+}
+
+/* Rotating card */
+.center {text-align: center;}
+
+.cardContainer {
+    width: 90px;
+    height: 180px;
+    position: relative;
+    padding-left: 80px;
+    perspective: 800px;
+}
+
+#card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;  
+}
+
+#card figure{
+    margin:0;
+    padding-left: 20px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+#card .front{
+    background: rgb(13, 58, 11);
+    color:white;
+}
+
+#card .back{
+    background: rgb(43, 153, 21);
+    color: black;
+    transform: rotateY(180deg);
+}
+
+#card:hover{
+    transform: rotateY(180deg);
 }
