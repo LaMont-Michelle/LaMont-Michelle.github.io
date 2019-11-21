@@ -74,15 +74,15 @@ function f(ev) {
 // the moveable circle
 var dragItem = document.querySelector("#item");
     var container = document.querySelector("#container");
-    // conditions relating to circle's status
+    // conditions relating to circle's status,load status
     var active = false;
     var currentX;
     var currentY;
     var initialX;
     var initialY;
-    var xOffset = 0;
+    var xOffset = 0; /*https://www.w3schools.com/jsref/event_offsetx.asp*/
     var yOffset = 0;
-
+// calls the functions, sets to false
     container.addEventListener("touchstart", dragStart, false);
     container.addEventListener("touchend", dragEnd, false);
     container.addEventListener("touchmove", drag, false);
@@ -93,7 +93,7 @@ var dragItem = document.querySelector("#item");
 
     function dragStart(e) {
       if (e.type === "touchstart") {
-        initialX = e.touches[0].clientX - xOffset;
+        initialX = e.touches[0].clientX - xOffset; /*https://www.w3schools.com/jsref/event_clientx.asp */
         initialY = e.touches[0].clientY - yOffset;
       } else {
         initialX = e.clientX - xOffset;
@@ -115,7 +115,7 @@ var dragItem = document.querySelector("#item");
     function drag(e) {
       if (active) {
       
-        e.preventDefault();
+        e.preventDefault(); /*https://www.w3schools.com/jsref/event_preventdefault.asp */
       
         if (e.type === "touchmove") {
           currentX = e.touches[0].clientX - initialX;
