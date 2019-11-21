@@ -161,8 +161,7 @@ var dragItem = document.querySelector("#item");
     }
 
 
-//  random color body fun
-// create a var to grab button tag
+//  random color body fun - create a var to grab button tag
 var btn = document.querySelector('button');
 
 //function to create random number
