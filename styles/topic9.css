@@ -27,14 +27,14 @@ p{
 }
 
 /* onload */
-#box1, #box3, #box4, #box5, #scale, #box7, #box8 {
+#box1, #box3, #box4, #box5, #scale {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
 }
 
-#box2, #box4,#box-7 {  
+#box2, #box4,#box-7,#testEvents {  
     background: #0c5460;
     display: flex;
     flex-flow: column;
@@ -122,7 +122,11 @@ input{
 }
 #quote {padding: 5px;}
 
+/* 8 */
 
+.spin{
+    animation: spin 4s linear 400ms;
+}
 
 
 
