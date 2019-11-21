@@ -74,11 +74,6 @@ upperString.onkeyup = function(){
 };
 
 
-// animation
-
-
-
-
 // test touch events
 //document.querySelector('#testEvents').addEventListener('touchstart', f);
 //document.querySelector('#testEvents').addEventListener('touchend', f);
@@ -92,8 +87,8 @@ function runDog() {
 
     var scottie = document.getElementById('scottie');
    
-    scottie.addEventListener('touchmove', function (ev) {
-        var theLocation = ev.targetTouches[0];
+    scottie.addEventListener('touchmove', function (ev2) {
+        var theLocation = ev2.targetTouches[0];
         scottie.style.left = theLocation.pageX + 'px';
         scottie.style.top = theLocation.pageY + 'px';
     })
