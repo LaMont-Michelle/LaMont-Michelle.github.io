@@ -122,11 +122,6 @@ input{
 }
 #quote {padding: 5px;}
 
-/* 8 */
-
-.spin{
-    animation: spin 4s linear 400ms;
-}
 
 /* touchmove circle */
 #container2 {
