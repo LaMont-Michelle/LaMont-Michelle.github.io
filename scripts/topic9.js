@@ -62,7 +62,7 @@ upperString.onkeyup = function(){
     upperString.style.cssText = "color: #E9A500;";
 };
 
-// test touch events
+// test touch events to console log
 document.querySelector('#testEvents').addEventListener('touchstart', f);
 document.querySelector('#testEvents').addEventListener('touchend', f);
 document.querySelector('#testEvents').addEventListener('touchmove', f);
@@ -74,7 +74,7 @@ function f(ev) {
 // the moveable circle
 var dragItem = document.querySelector("#item");
     var container = document.querySelector("#container");
-
+    // conditions relating to circle's status
     var active = false;
     var currentX;
     var currentY;
