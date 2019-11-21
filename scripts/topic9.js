@@ -55,17 +55,6 @@ moveon.addEventListener('mouseout', function () {
 });
 
 // 7
-// KEYBOARD events in the sixth container
-/*let keypress = document.getElementById('press');
-
-keypress.addEventListener('keypress', function(){
-    keypress.style.cssText = "background: #9B2F22; transition: background .5s ease-in-out; color: #E9A500;";
-});
-
-keypress.addEventListener('focusout',function () {
-    keypress.style.cssText = "background: #e63b25; transition: background .5s ease-in-out;";
-});
-*/
 let upperString = document.getElementById('upperString');
 
 upperString.onkeyup = function(){
@@ -73,29 +62,16 @@ upperString.onkeyup = function(){
     upperString.style.cssText = "color: #E9A500;";
 };
 
-
 // test touch events
-//document.querySelector('#testEvents').addEventListener('touchstart', f);
-//document.querySelector('#testEvents').addEventListener('touchend', f);
+document.querySelector('#testEvents').addEventListener('touchstart', f);
+document.querySelector('#testEvents').addEventListener('touchend', f);
 document.querySelector('#testEvents').addEventListener('touchmove', f);
 
 function f(ev) {
     console.log( ev.touches, ev.type );
 }
 
-function runDog() {
-
-    var scottie = document.getElementById('scottie');
-   
-    scottie.addEventListener('touchmove', function (ev2) {
-        var theLocation = ev2.targetTouches[0];
-        scottie.style.left = theLocation.pageX + 'px';
-        scottie.style.top = theLocation.pageY + 'px';
-    })
-}
-
-
-// test this now
+// the moveable circle
 var dragItem = document.querySelector("#item");
     var container = document.querySelector("#container");
 
