@@ -10,21 +10,21 @@ let magnify = document.getElementById('focus');
 magnify.addEventListener('focusin', function(){
     magnify.style.cssText = "background: #9B2F22; transition: all .5s ease-in-out";
 });
-magnify.addEventListener('focusout',function () {
+magnify.addEventListener('focusout',function() {
     magnify.style.cssText = "background: #e63b25; transition: all .5s ease-in-out";
 });
 
-// 3  CLICK
+// 3  CLICK 1
 function scale(elem){
     elem.classList.toggle("scale");
 }
   
-// 3b
+// 4 CLICK 2
 function displayDate() {
     document.getElementById("display").innerHTML = Date();
 }
 
-// 4
+// 5 MOUSEDOWN MOUSEUP 
 let movup = document.getElementById('box5');
 let tip2 = document.getElementById('tip2');
 
@@ -39,40 +39,24 @@ movup.addEventListener('mouseup', function () {
     tip2.style.display = "block";
 });
 
-
-// 5
-let moveon = document.getElementById('box4');
+// 6 KEYBOARD
+let moveon = document.getElementById('box-6');
 let quote = document.getElementById('quote');
 let tip1 = document.getElementById('tip1');
 
-moveon.addEventListener('mouseout', function () {
-    if('mouseout') {
-    quote.style.display = "none";
-    tip1.style.display = "block"}
-    else{
-        moveon.addEventListener('mouseover', function () {
-            quote.style.display = "inherit";
-            tip1.style.display = "none";
-        });  
-    }
-});
 moveon.addEventListener('mouseover', function () {
     quote.style.display = "inherit";
     tip1.style.display = "none";
-});  
+});
 
 moveon.addEventListener('mouseout', function () {
     quote.style.display = "none";
     tip1.style.display = "block";
 });
-moveon.addEventListener('mouseover', function () {
-    quote.style.display = "inherit";
-    tip1.style.display = "none";
-});  
 
-// 6
+// 7
 // KEYBOARD events in the sixth container
-let keypress = document.getElementById('press');
+/*let keypress = document.getElementById('press');
 
 keypress.addEventListener('keypress', function(){
     keypress.style.cssText = "background: #9B2F22; transition: background .5s ease-in-out; color: #E9A500;";
@@ -81,69 +65,52 @@ keypress.addEventListener('keypress', function(){
 keypress.addEventListener('focusout',function () {
     keypress.style.cssText = "background: #e63b25; transition: background .5s ease-in-out;";
 });
+*/
+let upperString = document.getElementById('upperString');
 
-let release = document.getElementById('release');
-
-release.onkeyup = function(){
+upperString.onkeyup = function(){
     this.value = this.value.toUpperCase();
-    release.style.cssText = "color: #E9A500;";
+    upperString.style.cssText = "color: #E9A500;";
 };
-// end of 6
+
 
 // animation
-/*
-let anime = document.getElementById('anime');
-anime.addEventListener('click',function () {
-    anime.classList.add('spin');
-});
 
-anime.addEventListener('animationstart',function(){
-    anime.innerHTML = "Start";
-});
 
-anime.addEventListener('animationend',function () {
-    anime.innerHTML = "End";
-    // reset the properties after 1.5s, so the user can click again
-    setTimeout(function(){
-        anime.classList.remove('spin');
-        anime.innerHTML = "Click Me";
-    },1500);
-});
-// TOUCHSTART event in the seventh container
-let tstart = document.getElementById('box7');
-let num = document.getElementById('counter');
-let counter = 0;
 
-tstart.addEventListener('touchstart',function () {
 
-    // this tweak prevents a context menu to appear on long taps
-    tstart.oncontextmenu = function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-    };
+// test touch events
+//document.querySelector('#testEvents').addEventListener('touchstart', f);
+//document.querySelector('#testEvents').addEventListener('touchend', f);
+document.querySelector('#testEvents').addEventListener('touchmove', f);
 
-    counter++;
-    num.innerHTML = counter.toString();
-    //
-});
+function f(ev) {
+    console.log( ev.touches, ev.type );
+}
 
-tstart.addEventListener('touchend',function () {
-    return false;
-});
-*/
-// end animation box
+function runDog() {
 
+    var scottie = document.getElementById('scottie');
+   
+    scottie.addEventListener('touchmove', function (ev) {
+        var theLocation = ev.targetTouches[0];
+        scottie.style.left = theLocation.pageX + 'px';
+        scottie.style.top = theLocation.pageY + 'px';
+    })
+}
 
 
 //  random color body fun
+// create a var to grab button tag
 var btn = document.querySelector('button');
 
+//function to create random number
 function random(number) {
   return Math.floor(Math.random()*(number+1));
 }
 
+//instance of button tag to create onclick event to call function for random rgb color parameters
 btn.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-  document.body.style.backgroundColor = rndCol;
+  var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = randomColor;
 }
