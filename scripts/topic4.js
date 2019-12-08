@@ -40,3 +40,31 @@ xhttp.onreadystatechange = function () {
     xhttp.open("GET", "https://swapi.co/api/people/1/", true);
     xhttp.send();
 };
+
+
+function requestDisplayHP() {
+    var xhttp = new XMLHttpRequest();       // xhttp is a commonly used variable 
+    var results = document.getElementById('displayParsedHP');
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var dataHP = JSON.parse(xhttp.responseText);
+            console.log(dataHP);
+            results.innerHTML += 
+            '<br>' + dataHP.sortingHat; 
+            
+            /*"House: " + dataHP.name ;
+           /*
+           + 
+           '<br>' + "Height: " + dataSW.height +
+           '<br>' + "Mass: " + dataSW.mass + 
+           '<br>' + "Hair color: " + dataSW.hair_color +
+           '<br>' + "Skin color: " + dataSW.skin_color +
+           '<br>' + "Eye color: " + dataSW.eye_color +
+           '<br>' + "Birth year: " + dataSW.birth_year +
+           '<br>' + "Gender: " + dataSW.gender ;
+           */
+            }
+        }
+        xhttp.open("GET", "https://www.potterapi.com/v1/sortingHat", true);
+        xhttp.send();
+    };
