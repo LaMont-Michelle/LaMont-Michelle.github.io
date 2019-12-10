@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html>
+    <!-- STYLE -->
+<style>
+html {
+	margin: 25px;
+	color: #333;
+}
 
+select { 
+    font: 1.5em Comic Sans MS;
+    background-color: rgba(211, 211, 211, 0.842);
+    align-self: center;
+}
+
+.custom-select {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap; 
+    font-family: Comic Sans MS;
+    background-color: rgb(99, 1, 1);
+    padding: 1em;
+    align-items: flex-start;
+}
+
+#listHead {
+    font-family: Comic Sans MS;
+}
+#mList {
+    border: 1px solid black;
+    font: 1.5em Comic Sans MS;
+}
+#btnList {
+    background-color: rgb(99, 1, 1);
+    color: gainsboro;
+    display: inline-block;
+    padding: 20px 30px;
+    font-family: comic sans MS;
+    font-size: 24px;
+}
+</style>
 <body>     
-<h2>Order your favorite Jurassic movies:</h2>
+<h2 id="listHead" >Order and save your favorite Jurassic movies:</h2>
         
-    <form>
+    <form class="custom-select">
         <select id="dropDown" name="movies" onchange="changeHiddenInput(this);toStorage()">
-            <option value="0" disabled selected> --select from the list of movies-- </option>
+            <option value="0" disabled selected> - select the movies - </option>
             <option value="Jurassic Park"> Jurassic Park </option>
             <option value="Jurassic Park: The Lost World"> Jurassic Park: The Lost World </option>
             <option value="Jurassic Park III" > Jurassic Park III </option>
@@ -18,16 +56,16 @@
         <!--<div id="result"> </div>-->
     </form>
 <br>
-<div style="border:1px solid black">
+<div id="mList" >
 <ol id="movieList">
 <!--the list will appear here-->
     </ol>
 </div>
     <br>
-    <button onclick="undoLast();undoStorageItem()">Remove last option</button>
-    <button onclick="removeMovies();resetStorage(); window.location.reload()"> Clear list and start over </button>
+    <button id="btnList" onclick="undoLast();undoStorageItem()">Remove last option</button>
+    <button id="btnList" onclick="removeMovies();resetStorage(); window.location.reload()"> Clear list and start over </button>
 <br>   
-<p>This is the list pushed into localStorage:</p>
+
 <div id="addItems"></div><br>
 
     <audio id="audio" volume="0.1" autoplay loop >
@@ -60,7 +98,7 @@ window.onload = function() {
 } // function
 
 function changeHiddenInput(objDropDown) {
-    //console.log(objDropDown);
+   // console.log(objDropDown);
     var node = document.createElement("li");
     var objHidden = document.getElementById("hiddenInput");
     objHidden.value = objDropDown.value;
@@ -77,7 +115,7 @@ function toStorage() {
     drophistory.push(dropd);
     //drophistory.push('<br>', dropd);
     localStorage.setItem("toStorage", JSON.stringify(drophistory));
-    document.getElementById("addItems").innerHTML = drophistory;
+   // document.getElementById("addItems").innerHTML = drophistory;
 
 }
 
@@ -106,7 +144,7 @@ function removeMovies() {
 // clear local storage called on same reset button
 function resetStorage() {
     localStorage.clear();
-    document.getElementById("addItems").innerHTML = "";
+   // document.getElementById("addItems").innerHTML = "";
 }
 
 </script>
