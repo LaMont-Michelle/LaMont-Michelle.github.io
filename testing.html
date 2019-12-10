@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<body>     
+<h2>Order your favorite Jurassic movies:</h2>
+        
+    <form>
+        <select id="dropDown" name="movies" onchange="changeHiddenInput(this);toStorage()">
+            <option value="0" disabled selected> --select from the list of movies-- </option>
+            <option value="Jurassic Park"> Jurassic Park </option>
+            <option value="Jurassic Park: The Lost World"> Jurassic Park: The Lost World </option>
+            <option value="Jurassic Park III" > Jurassic Park III </option>
+            <option value="Jurassic World"> Jurassic World </option>
+            <option value="Jurassic World: Hidden Kingdom"> Jurassic World: Hidden Kingdom </option>
+        </select>
+        <input type="hidden" name="hiddenInput" id="hiddenInput" value="" />
+        <br><br>
+        <!--<div id="result"> </div>-->
+    </form>
+<br>
+<div style="border:1px solid black">
+<ol id="movieList">
+<!--the list will appear here-->
+    </ol>
+</div>
+    <br>
+    <button onclick="undoLast();undoStorageItem()">Remove last option</button>
+    <button onclick="removeMovies();resetStorage(); window.location.reload()"> Clear list and start over </button>
+<br>   
+<p>This is the list pushed into localStorage:</p>
+<div id="addItems"></div><br>
+
+    <audio id="audio" volume="0.1" autoplay loop >
+            <source src="../media/Jurassic _World .mp3" type="audio/mp3">
+            </audio>
+
+<!--JavaScript-->
+<script>
+// see object in console for debugging
+var select;
+window.onload = function () {
+    select = document.getElementById('dropDown');
+    console.log(select);
+}
+// Recall to user their preference list of movies 
+window.onload = function() {
+    if(!localStorage.toStorage)
+    document.getElementById("movieList").innerHTML = "";  
+    else {
+    var list = localStorage.toStorage;
+    var obj = JSON.parse(list);
+    console.log(obj);
+    for (i = 0; i < obj.length; i++) {
+        var node = document.createElement("li");
+        var item = document.createTextNode(obj[i]);
+        node.appendChild(item);
+        document.getElementById("movieList").appendChild(node);
+        }
+    } //else
+} // function
+
+function changeHiddenInput(objDropDown) {
+    //console.log(objDropDown);
+    var node = document.createElement("li");
+    var objHidden = document.getElementById("hiddenInput");
+    objHidden.value = objDropDown.value;
+    var a = objHidden.value;
+    var name = document.createTextNode(a);
+    node.appendChild(name);
+    document.getElementById("movieList").appendChild(node); 
+/* result.innerHTML = a || "";  */
+}
+
+function toStorage() {
+    var dropd = document.getElementById("dropDown").value;
+    var drophistory = JSON.parse(localStorage.getItem("toStorage")) || [];
+    drophistory.push(dropd);
+    //drophistory.push('<br>', dropd);
+    localStorage.setItem("toStorage", JSON.stringify(drophistory));
+    document.getElementById("addItems").innerHTML = drophistory;
+
+}
+
+//  removes the last node
+function undoLast() {
+  var x = document.getElementById("movieList");
+  if(x.hasChildNodes()){
+         x.removeChild(x.lastChild);
+       }
+}
+// romove one item from the local storage list  - THIS IS NOT CORRECT
+function undoStorageItem(){
+    var store = JSON.parse(localStorage.getItem("toStorage"));
+    console.log(store);
+    store.pop();
+    console.log(store);
+    localStorage.setItem("toStorage", JSON.stringify(store));
+}
+
+// to reset list
+function removeMovies() {
+  var x = document.getElementById("movieList");
+  console.log(x);
+  x.remove(x);
+}
+// clear local storage called on same reset button
+function resetStorage() {
+    localStorage.clear();
+    document.getElementById("addItems").innerHTML = "";
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+<!--  THE FLIPPING BOXES
+
+    <div class="flex2">
+        <div>
+            <p>Brachiosaurus</p>
+        </div>
+        <div id="f1_container">
+            <div id="f1_card" class="shadow">
+                <div class="front face">
+                    <img src="../images/Brachiosaurus3.png" width="70%" height="100%"/>
+                </div>
+                <div class="back face center">
+                <p>Jurassic Park, Jurassic Park 3, Jurassic World: Fallen Kingdom</p>
+                </div>
+            </div>
+        </div>
+    </div> flex2
+
+    <div class="flex2">
+        <div>
+            <p>Gallimimus</p>
+        </div>  
+        <div id="f1_container">
+            <div id="f1_card" class="shadow">
+                <div class="front face">
+                    <img src="../images/Gallimimus.png" width="100%" height="100%"/>
+                </div>
+                <div class="back face center">
+                <p>Jurassic Park, The Lost World: Jurassic Park, Jurassic World, Jurassic World: Fallen Kingdom</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+<!--  FROM FRAMEWORK FOR FINAL PROJECT
+        <div class="w3-quarter">
+            <img src="#" alt=" " style="width:100%">
+            <h3>User can select a dinosaur in drop menu </h3>
+            <p>enter you name into local storage and dinosaur favorite in to session storage
+                    Then user name is remembered, but they can pick a new dino each session.
+                maybe  "Hello  __name__ what dinosaur would you like to learn about now? "
+                image displays "click to see information on __dino__ and what movie(s) you can see it in action"
+            </p>
+
+            <div style="text-align:center;border:1px solid rgb(2, 66, 7)">
+                <h3> Pull a dino api: </h3>
+                <img src="../images/Tyranosaurus.png" alt="dino" width="200" height="200"></a>
+                 <button type="button" class="button" onclick="requestDisplayDino()"> Reveal  </button><br><hr>
+                <div id="displayParsedDino"></div><br>
+            </div>  
+
+
+
+
+        </div>
+
+
+        <div class="w3-quarter">
+            <img src="#" alt=" " style="width:100%">
+            <h3>Do CRUD</h3>
+            <p>Make an opton for the user to name and create their own dinosaur</p>
+            <p>What else?</p>
+        </div>
+    
+    -->
+        
+        <!-- Second Photo Grid
+        <div class="w3-row-padding w3-padding-16 w3-center">
+        <div class="w3-quarter">
+            <img src="#" alt=" " style="width:100%">
+            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="w3-quarter">
+            <img src="#" alt=" " style="width:100%">
+            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="w3-quarter">
+            <img src="#" alt=" " style="width:100%">
+            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="w3-quarter">
+            <img src="#" alt=" " style="width:100%">
+            <h3>Lorem ipsum dolor sit amet, consectetur/h3>
+            <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        </div>
+
+    -->
+    
+        <!-- Pagination 
+        <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+            <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+        </div>
+        
+        <hr id="about">
+    
+        // About Section 
+        <div class="w3-container w3-padding-32 w3-center">  
+        <h3>Jurassic movie series</h3><br>
+        <img src="" alt=" " class="w3-image" style="display:block;margin:auto" width="800" height="533">
+        <div class="w3-padding-32">
+            <h4><b>Jurasic Park</b></h4>
+            <h6><i>Jurassic World   </i></h6>
+            <p>
+            flipping card display the name or image or info....
+            </p>
+      </div>
+        </div>
+    */
+
+    
