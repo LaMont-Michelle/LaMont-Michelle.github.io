@@ -1,0 +1,105 @@
+{ "dinosaurs" : [
+
+    {
+        "name" : "Allosaurus",
+        "movies" : [ "Jurassic World: The Fallen Kingdom"]
+    },
+    {
+        "name" : "Ankylosaurus",
+        "movies" : [ "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World: The Fallen Kingdom" ]
+    },
+    {
+        "name" : "Apatosurus",
+        "movies" : [ "Jurassic World", "Jurassic World: The Fallen Kingdom"]
+
+    },
+    {
+        "name" : "Baryonyx",
+        "movies" : ["Jurassic World: The Fallen Kingdom"]
+    },
+    {
+        "name" : "Brachiosaurus",
+        "movies" : [ "Jurassic Park", "Jurassic Park III", "Jurassic World: The Fallen Kingdom" ]
+    },
+    {
+        "name" : "Carnotaurus",
+        "movies" : ["Jurassic World: The Fallen Kingdom" ]
+    },
+    {
+        "name" : "Ceratosaurus",
+        "movies" : [ "Jurassic Park III" ]
+    },
+    {
+        "name" : "Campsognathus",
+        "movies" : [ "Jurassic Park: The Lost World", "Jurassic Park III" , "Jurassic World: The Fallen Kingdom"]
+    },
+    {
+        "name" : "Corythosaurus",
+        "movies" : [ "Jurassic Park III"]
+    },    
+    {
+        "name" : "Dilophosaurus",
+        "movies" : [ "Jurassic Park" ]
+    },
+    {
+        "name" : "Dimorphodon",
+        "movies" : [ " Jurassic World"]
+    },  
+    {
+        "name" : "Gallimimus",
+        "movies" : [ "Jurassic Park", "Jurassic Park: The Lost World", "Jurassic World", "Jurassic World: The Fallen Kingdom" ]
+    },     
+    {
+        "name" : "Mamenchisaurus",
+        "movies" : [ "Jurassic Park: The Lost World" ]
+    },       
+    {
+        "name" : "Mosasaurus",
+        "movies" : [ "Jurassic World",  "Jurassic World: The Fallen Kingdom"]
+    },
+    {
+        "name" : "Pachycephalosaurus",
+        "movies" : [ "Jurassic Park: The Lost World " ]
+    },
+    {
+        "name" : "Parasaurolophus",
+        "movies" : [ "Jurassic Park", "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World", "Jurassic World: The Fallen Kingdom"]
+    },
+    {
+        "name" : "Pteranodon",
+        "movies" : [ "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World",  "Jurassic World: The Fallen Kingdom"]
+    },    
+    {
+        "name" : "Sinoceratops",
+        "movies" : [ "Jurassic World: The Fallen Kingdom" ]
+    },
+    {
+        "name" : "Spinosaurus",
+        "movies" : [ "Jurassic Park III" ]
+    },
+    {
+        "name" : "Stegosaurus",
+        "movies" : [ "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World",  "Jurassic World: The Fallen Kingdom"]
+    },
+    
+    {
+        "name" : "Stygimolock",
+        "movies" : [ "Jurassic World: The Fallen Kingdom" ]
+    },
+    {
+        "name" : "Triceratops",
+        "movies" : [ "Jurassic Park", "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World", "Jurassic World: The Fallen Kingdom" ]
+    },    
+    {
+        "name" : "Tyrannosaurus",
+        "movies" : [ "Jurassic Park", "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World", "Jurassic World: The Fallen Kingdom" ]
+    },    
+    {
+        "name" : "Velociraptor",
+        "movies" : [ "Jurassic Park", "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World", "Jurassic World: The Fallen Kingdom" ]
+    }
+
+ 
+]}
+
+
