@@ -23,10 +23,10 @@ function requestDisplayDino(temp) {
           var k = 0;
           //printMovies +=  '<h3>' + temp + '</h3><br> Movies: ' ;
           printMovies += "The " + temp + " can be seen in "
-          printMovies += rawDataDino.dinosaurs[j].movies[k];
+         // printMovies += rawDataDino.dinosaurs[j].movies[k];
         while (k < rawDataDino.dinosaurs[j].movies.length){
-          printMovies += ", ";
           printMovies += rawDataDino.dinosaurs[j].movies[k];
+          printMovies += ", ";
           k++;
         }
         }
@@ -35,8 +35,6 @@ function requestDisplayDino(temp) {
       window.alert(printMovies);
       /*  results.innerHTML = 
           '<br>'+ printMovies; */
-         
-          
       }   
     }
       xhttp.open("GET", "final_project.json", true);
