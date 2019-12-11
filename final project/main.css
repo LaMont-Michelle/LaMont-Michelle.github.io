@@ -68,7 +68,6 @@ html {
   }
 }
 
-
 /* CONTENT */
 body,h1,h2,h3,h4,h5,h6 {
     font-family: "Karma", sans-serif;
@@ -120,7 +119,6 @@ border: 2px solid yellow;
 	border:3px solid rgb(2, 66, 7);
 	
 }
-
 
 select { 
     font: 1.1em Comic Sans MS;
