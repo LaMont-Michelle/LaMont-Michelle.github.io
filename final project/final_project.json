@@ -30,7 +30,7 @@
         "movies" : [ "Jurassic Park III" ]
     },
     {
-        "name" : "Campsognathus",
+        "name" : "Compsognathus",
         "movies" : [ "Jurassic Park: The Lost World", "Jurassic Park III" , "Jurassic World: The Fallen Kingdom"]
     },
     {
@@ -81,7 +81,6 @@
         "name" : "Stegosaurus",
         "movies" : [ "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World",  "Jurassic World: The Fallen Kingdom"]
     },
-    
     {
         "name" : "Stygimolock",
         "movies" : [ "Jurassic World: The Fallen Kingdom" ]
@@ -98,8 +97,7 @@
         "name" : "Velociraptor",
         "movies" : [ "Jurassic Park", "Jurassic Park: The Lost World", "Jurassic Park III", "Jurassic World", "Jurassic World: The Fallen Kingdom" ]
     }
-
- 
+    
 ]}
 
 
