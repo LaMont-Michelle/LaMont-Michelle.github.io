@@ -3,24 +3,33 @@ html {
 	background-color: black;/* rgba(211, 211, 211, 0.842);*/
 }
 
-/* Slide menu styles */
+.topbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+.topbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topbar a:hover {
+    background-color:rgb(99, 1, 1);
+    color: white;
+    border: .1px solid yellow;
+  }
+  /*
+  .topbar a.active {
+    background-color:rgb(99, 1, 1);
+    color: white;
+  } */
 /*
-.flex {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-TO COMPARE WHAT CAN BE DONE TO MAIN
-main{
-padding-bottom: auto;
-background-color: black;
-display: flex;
-flex-wrap: wrap;
-}
-*/
-
 .slide-menu {
-	background-color: black; /* needed */
+	background-color: black; 
 }
 .sidenav {
     position: fixed;
@@ -90,7 +99,7 @@ flex-wrap: wrap;
 }
 
 .open .bars:hover div {
-    background-color: rgb(99, 1, 1); /* the X */
+    background-color: rgb(99, 1, 1); 
 }
 
 .open .menu-icon {
@@ -102,6 +111,7 @@ flex-wrap: wrap;
 .open a {
     display: block;
 }
+*/
 
 /* THE EARTH */
 @keyframes spin{
