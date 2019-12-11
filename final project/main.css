@@ -1,6 +1,6 @@
 /* Back ground */
 html {
-	background-color: rgba(211, 211, 211, 0.842);
+	background-color: black;/* rgba(211, 211, 211, 0.842);*/
 }
 
 /* Slide menu styles */
@@ -150,7 +150,10 @@ flex-wrap: wrap;
 
 
 /* CONTENT */
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Karma", sans-serif;
+    color: whitesmoke;
+}
 
 #title-wrap {border: 4px solid black;}
 #title {
