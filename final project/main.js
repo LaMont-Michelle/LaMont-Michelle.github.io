@@ -22,7 +22,7 @@ function requestDisplayDino(temp) {
           printMovies = " ";
           var k = 0;
           //printMovies +=  '<h3>' + temp + '</h3><br> Movies: ' ;
-          printMovies += "The " + temp + "can be seen in "
+          printMovies += "The " + temp + " can be seen in "
           printMovies += rawDataDino.dinosaurs[j].movies[k];
         while (k < rawDataDino.dinosaurs[j].movies.length){
           printMovies += ", ";
