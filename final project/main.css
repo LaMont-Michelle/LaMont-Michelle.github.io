@@ -121,7 +121,7 @@ border: 2px solid yellow;
 }
 
 select { 
-    font: 1.1em Comic Sans MS;
+    font: 1.1em "Comic Sans MS";
     background-color: rgba(211, 211, 211, 0.842);
     align-self: center;
 }
@@ -130,24 +130,24 @@ select {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap; 
-    font-family: Comic Sans MS;
+    font-family: "Comic Sans MS";
     background-color: rgb(99, 1, 1);
     padding: 1em;
     align-items: flex-start;
 }
 
 #listHead {
-    font-family: Comic Sans MS;
+    font-family: "Comic Sans MS";
 }
 #mList {
     border: 1px solid black;
-    font: 1.5em Comic Sans MS;
+    font: 1.5em "Comic Sans MS";
 }
 #btnList {
     background-color: rgb(99, 1, 1);
     color: gainsboro;
     display: inline-block;
     padding: 15px 25px;
-    font-family: comic sans MS;
+    font-family: "comic sans MS";
     font-size: 24px;
 }
