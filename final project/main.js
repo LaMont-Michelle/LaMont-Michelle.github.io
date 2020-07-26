@@ -35,3 +35,8 @@ function requestDisplayDino(temp) {
       xhttp.open("GET", "final_project.json", true);
       xhttp.send();
   }; 
+
+  // change color and make bigger
+function textChange(){
+  document.getElementById("changingText").classList.toggle("size");
+}
