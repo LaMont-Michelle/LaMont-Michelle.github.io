@@ -372,7 +372,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div class="w3-row-padding">
     <div class="w3-third">
       <h3>FOOTER</h3>
-      <p>All plants are subject to attention, care, and intellectual decisions. </p>
+      <p>All plants are subject to weather, attention, care, and intellectual decisions. </p>
     </div>
   
     <div class="w3-third">
@@ -433,6 +433,11 @@ function filterSelection(c) {
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
     if (x[i].getElementById.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+  if (c == "north") cN = "";
+    for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].getElementById.indexOf(cN) > -1) w3AddClass(x[i], "show");
   }
 }
 
